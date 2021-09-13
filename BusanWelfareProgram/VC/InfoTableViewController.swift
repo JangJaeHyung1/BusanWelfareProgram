@@ -9,9 +9,12 @@ import UIKit
 
 class InfoTableViewController: UIViewController {
 
+    var gugun: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(gugun)
         // Do any additional setup after loading the view.
     }
     
