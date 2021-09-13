@@ -7,3 +7,5 @@ UI/UX design : https://www.figma.com/proto/muCIJZBSmkrVQTy3wri48k/부산-사회�
 
 - 필요기능: infinite scroll fetch api, 선택 스크롤, core date 지역구 데이터 저장, 지도 표시 정도.
 - 검색기능: 보류
+
+작업기간: 2021.09.11~
