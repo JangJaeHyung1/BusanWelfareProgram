@@ -17,28 +17,25 @@ class SelectGugunViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-//        myPicker = UIPickerView()
-//        myPicker.frame = CGRect(x: 100, y: 100, width: 200, height: 200)
-//        view.addSubview(myPicker)
-//
-//        myPicker.delegate = self
-//        myPicker.dataSource = self
-//
-//
+    }
+
+    
+    override func viewDidLayoutSubviews() {
+        selectedPickerViewUICustom()
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    func selectedPickerViewUICustom() {
+        gugunPickerView.subviews[1].backgroundColor = .clear
+        
+        let upLine = UIView(frame: CGRect(x: 15, y: 0, width: 150, height: 0.8))
+        let underLine = UIView(frame: CGRect(x: 15, y: 60, width: 150, height: 0.8))
+        
+        upLine.backgroundColor = UIColor(rgb: 0x0061B4)
+        underLine.backgroundColor = UIColor(rgb: 0x0061B4)
+        
+        gugunPickerView.subviews[1].addSubview(upLine)
+        gugunPickerView.subviews[1].addSubview(underLine)
+    }
 }
 
 extension SelectGugunViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -46,15 +43,48 @@ extension SelectGugunViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         return 1
     }
     
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 60
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 60))
+
+        let gugunLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 60))
+        gugunLabel.text = gugunList[row]
+        gugunLabel.textAlignment = .center
+        gugunLabel.font = UIFont.systemFont(ofSize: 28, weight: .light)
+
+        view.addSubview(gugunLabel)
+        return view
+    }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return gugunList.count
     }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return gugunList[row]
-    }
+ 
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("select=\(row)")
     }
+}
+
+
+extension UIColor {
+   convenience init(red: Int, green: Int, blue: Int) {
+       assert(red >= 0 && red <= 255, "Invalid red component")
+       assert(green >= 0 && green <= 255, "Invalid green component")
+       assert(blue >= 0 && blue <= 255, "Invalid blue component")
+
+       self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+   }
+
+   convenience init(rgb: Int) {
+       self.init(
+           red: (rgb >> 16) & 0xFF,
+           green: (rgb >> 8) & 0xFF,
+           blue: rgb & 0xFF
+       )
+   }
 }

@@ -99,18 +99,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gjr-nk-zdo">
-                                <rect key="frame" x="68" y="346" width="278.5" height="150"/>
+                                <rect key="frame" x="68" y="321" width="278.5" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부산" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dW-Sf-cJD">
-                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="200"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40f-Zo-MrX">
-                                        <rect key="frame" x="78.5" y="0.0" width="200" height="150"/>
+                                        <rect key="frame" x="78.5" y="0.0" width="200" height="200"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="rkQ-sp-aTM"/>
+                                            <constraint firstAttribute="height" constant="200" id="rkQ-sp-aTM"/>
                                             <constraint firstAttribute="width" constant="200" id="wT9-Cn-0ej"/>
                                         </constraints>
                                         <connections>
