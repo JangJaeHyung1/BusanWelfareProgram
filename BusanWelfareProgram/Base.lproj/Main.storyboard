@@ -7,6 +7,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansKR-Black.otf">
+            <string>NotoSansKR-Black</string>
+        </array>
+        <array key="NotoSansKR-Regular.otf">
+            <string>NotoSansKR-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -128,24 +136,24 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Rx-Ic-8kA">
-                                <rect key="frame" x="40" y="100" width="322" height="119"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역구에 해당하는 복지 프로그램의정보를 제공합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfP-IO-B9i">
+                                <rect key="frame" x="50" y="191" width="314" height="20.5"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="Hb9-gy-akK">
+                                <rect key="frame" x="50" y="80" width="221" height="106"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="거주지역구가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18e-29-MEK">
-                                        <rect key="frame" x="0.0" y="0.0" width="322" height="50.5"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="42"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="거주지역구가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1U-1Q-rUr">
+                                        <rect key="frame" x="0.0" y="0.0" width="221" height="58"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Black" family="Noto Sans KR" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어디인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1U-1Q-rUr">
-                                        <rect key="frame" x="0.0" y="50.5" width="322" height="50.5"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="42"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역구에 해당하는 복지 프로그램의 정보를 제공합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfP-IO-B9i">
-                                        <rect key="frame" x="0.0" y="101" width="322" height="18"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어디인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18e-29-MEK">
+                                        <rect key="frame" x="0.0" y="48" width="221" height="58"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKR-Black" family="Noto Sans KR" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -155,13 +163,16 @@
                         <viewLayoutGuide key="safeArea" id="5M1-Wp-bBh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9Rx-Ic-8kA" firstAttribute="leading" secondItem="5M1-Wp-bBh" secondAttribute="leading" constant="40" id="DYi-wE-SDM"/>
+                            <constraint firstItem="TfP-IO-B9i" firstAttribute="leading" secondItem="5M1-Wp-bBh" secondAttribute="leading" constant="50" id="14f-A9-9hf"/>
                             <constraint firstItem="gjr-nk-zdo" firstAttribute="centerX" secondItem="dVA-84-yXv" secondAttribute="centerX" id="DtE-xF-RPA"/>
+                            <constraint firstItem="TfP-IO-B9i" firstAttribute="top" secondItem="Hb9-gy-akK" secondAttribute="bottom" constant="5" id="ELt-6a-NSp"/>
                             <constraint firstItem="na2-iE-BRd" firstAttribute="bottom" secondItem="5M1-Wp-bBh" secondAttribute="bottom" constant="-10" id="KNf-04-KdJ"/>
-                            <constraint firstItem="9Rx-Ic-8kA" firstAttribute="top" secondItem="5M1-Wp-bBh" secondAttribute="top" constant="100" id="MSk-rQ-QmC"/>
                             <constraint firstItem="gjr-nk-zdo" firstAttribute="centerY" secondItem="dVA-84-yXv" secondAttribute="centerY" id="Rbp-lV-mrP"/>
                             <constraint firstItem="na2-iE-BRd" firstAttribute="leading" secondItem="5M1-Wp-bBh" secondAttribute="leading" constant="40" id="V66-zb-F57"/>
+                            <constraint firstItem="5M1-Wp-bBh" firstAttribute="trailing" secondItem="TfP-IO-B9i" secondAttribute="trailing" constant="50" id="iNL-ND-KlO"/>
                             <constraint firstItem="5M1-Wp-bBh" firstAttribute="trailing" secondItem="na2-iE-BRd" secondAttribute="trailing" constant="40" id="mue-g7-jHp"/>
+                            <constraint firstItem="Hb9-gy-akK" firstAttribute="top" secondItem="5M1-Wp-bBh" secondAttribute="top" constant="80" id="olW-wD-RfT"/>
+                            <constraint firstItem="Hb9-gy-akK" firstAttribute="leading" secondItem="5M1-Wp-bBh" secondAttribute="leading" constant="50" id="q7m-NC-7Ni"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3LM-z4-AQI"/>
