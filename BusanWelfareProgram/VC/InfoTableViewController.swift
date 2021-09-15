@@ -7,26 +7,32 @@
 
 import UIKit
 
-class InfoTableViewController: UIViewController {
-
+class InfoTableViewController: UIViewController{
+    
     var gugun: String?
+    //변할때마다 출력하기
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print(gugun)
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = "둘러보기"
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.leftBarButtonItem = nil;
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.rightBarButtonItem?.target = self
+        self.navigationItem.rightBarButtonItem?.action = #selector(showSelectGugunVC)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func showSelectGugunVC(){
+//        UserDefaults.standard.setValue(nil, forKey: "gugun")
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectGugunViewController") as? SelectGugunViewController{
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
     }
-    */
+}
 
+extension InfoTableViewController: SendDataDelegate {
+    func sendData(data gugun: String) {
+        self.gugun = gugun
+//        print("gugun = \(self.gugun)")
+    }
 }

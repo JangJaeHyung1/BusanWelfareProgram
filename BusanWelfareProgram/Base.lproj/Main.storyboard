@@ -40,13 +40,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="tUZ-Ds-WYp" kind="showDetail" identifier="showPickerVC" id="5Ij-Bd-oAa"/>
+                        <segue destination="7q7-V0-JGD" kind="presentation" identifier="showPickerVC" modalPresentationStyle="fullScreen" id="5Ij-Bd-oAa"/>
                         <segue destination="Wan-GR-oT3" kind="presentation" identifier="showTableVC" modalPresentationStyle="fullScreen" id="6ZV-No-ntC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="77"/>
+            <point key="canvasLocation" x="-216" y="-106"/>
         </scene>
         <!--Title-->
         <scene sceneID="t9y-mf-gR0">
@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mch-Vv-8Ro">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="190" id="j32-Ql-urA">
@@ -88,18 +88,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00a-C9-jb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605.7971014492755" y="72.991071428571431"/>
+            <point key="canvasLocation" x="1739" y="216"/>
         </scene>
         <!--Select Gugun View Controller-->
         <scene sceneID="Zd6-AC-BrH">
             <objects>
-                <viewController id="tUZ-Ds-WYp" customClass="SelectGugunViewController" customModule="BusanWelfareProgram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectGugunViewController" id="tUZ-Ds-WYp" customClass="SelectGugunViewController" customModule="BusanWelfareProgram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dVA-84-yXv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gjr-nk-zdo">
-                                <rect key="frame" x="68" y="321" width="278.5" height="200"/>
+                                <rect key="frame" x="68" y="348" width="278.5" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부산" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dW-Sf-cJD">
                                         <rect key="frame" x="0.0" y="0.0" width="48.5" height="200"/>
@@ -121,7 +121,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="na2-iE-BRd">
-                                <rect key="frame" x="40" y="748" width="334" height="50"/>
+                                <rect key="frame" x="40" y="802" width="334" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.38021355870000001" blue="0.70415294169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gl0-5V-cN9"/>
@@ -135,15 +135,18 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveButtom:" destination="tUZ-Ds-WYp" eventType="touchUpInside" id="7qt-dq-TWz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역구에 해당하는 복지 프로그램의정보를 제공합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfP-IO-B9i">
-                                <rect key="frame" x="50" y="191" width="314" height="20.5"/>
+                                <rect key="frame" x="50" y="331" width="314" height="20.5"/>
                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="14"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="Hb9-gy-akK">
-                                <rect key="frame" x="50" y="80" width="221" height="106"/>
+                                <rect key="frame" x="50" y="220" width="221" height="106"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="거주지역구가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1U-1Q-rUr">
                                         <rect key="frame" x="0.0" y="0.0" width="221" height="58"/>
@@ -178,11 +181,12 @@
                     <navigationItem key="navigationItem" id="3LM-z4-AQI"/>
                     <connections>
                         <outlet property="gugunPickerView" destination="40f-Zo-MrX" id="wt2-jn-mUQ"/>
+                        <segue destination="fT0-3A-kf1" kind="show" identifier="showInfoTableVC" id="c5y-cQ-6n7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmh-kT-G45" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828.98550724637687" y="-597.32142857142856"/>
+            <point key="canvasLocation" x="1739.1304347826087" y="-597.32142857142856"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="aoB-cQ-9VM">
@@ -202,6 +206,7 @@
         <!--Navigation Controller-->
         <scene sceneID="4zv-3c-M0V">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G4F-uY-qtJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wan-GR-oT3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="J5V-LN-rvS"/>
@@ -214,11 +219,31 @@
                         <segue destination="fT0-3A-kf1" kind="relationship" relationship="rootViewController" id="Rb8-Ca-sDQ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G4F-uY-qtJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828.98550724637687" y="72.991071428571431"/>
+            <point key="canvasLocation" x="829" y="216"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YF5-TT-WlI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7q7-V0-JGD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="303-dR-KHC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tUZ-Ds-WYp" kind="relationship" relationship="rootViewController" id="KrJ-ep-ucm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fg-hd-mwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.98550724637687" y="-597.32142857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="c5y-cQ-6n7"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="loading" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
