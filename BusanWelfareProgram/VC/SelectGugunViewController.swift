@@ -11,7 +11,6 @@ protocol SendDataDelegate {
     func sendData(data gugun: String)
 }
 
-
 class SelectGugunViewController: UIViewController {
     var delegate: SendDataDelegate?
     var savedGugun: String?
@@ -25,9 +24,9 @@ class SelectGugunViewController: UIViewController {
             performSegue(withIdentifier: "showInfoTableVC", sender: savedGugun)
         }else{
 //            print("dismiss")
-            print(selectGugun)
-            delegate?.sendData(data: selectGugun)
+//            print(selectGugun)
             UserDefaults.standard.set(selectGugun, forKey: "gugun")
+            delegate?.sendData(data: selectGugun)
             dismiss(animated: true, completion: nil)
         }
     }

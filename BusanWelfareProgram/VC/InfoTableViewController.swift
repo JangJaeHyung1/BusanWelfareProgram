@@ -9,7 +9,11 @@ import UIKit
 
 class InfoTableViewController: UIViewController{
     
-    var gugun: String?
+    var gugun: String? {
+        didSet{
+            print("didset\(gugun)")
+        }
+    }
     //변할때마다 출력하기
     
     override func viewDidLoad() {
@@ -25,6 +29,7 @@ class InfoTableViewController: UIViewController{
 //        UserDefaults.standard.setValue(nil, forKey: "gugun")
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectGugunViewController") as? SelectGugunViewController{
             vc.modalPresentationStyle = .fullScreen
+            vc.delegate = self
             present(vc, animated: true, completion: nil)
         }
     }
@@ -33,6 +38,5 @@ class InfoTableViewController: UIViewController{
 extension InfoTableViewController: SendDataDelegate {
     func sendData(data gugun: String) {
         self.gugun = gugun
-//        print("gugun = \(self.gugun)")
     }
 }
