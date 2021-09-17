@@ -11,6 +11,10 @@ class InfoTableViewController: UIViewController{
     
     var gugun: String? {
         didSet{
+            fetchAPI.shared.getData(numOfRows: 5, PageNo: 1) { flag in
+                print(flag)
+            }
+//            fetchAPI.shared.getData(numOfRows: <#T##Int#>, PageNo: <#T##Int#>, completion: <#T##(Bool) -> Void#>)
             print("didset\(gugun)")
         }
     }

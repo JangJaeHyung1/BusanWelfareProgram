@@ -3,19 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ACA27B1AACF279DA1AB9289 /* Pods_BusanWelfareProgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0193F4637DBC13B43D7C2F /* Pods_BusanWelfareProgram.framework */; };
 		D112475326EF7398002C217A /* SelectGugunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112475226EF7398002C217A /* SelectGugunViewController.swift */; };
 		D112475626EF7500002C217A /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112475526EF7500002C217A /* InfoTableViewController.swift */; };
 		D112475826EF750B002C217A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112475726EF750B002C217A /* DetailViewController.swift */; };
+		D124713B26F3ADB500063350 /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D124713A26F3ADB500063350 /* RequestAPI.swift */; };
+		D124713D26F3B61D00063350 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D124713C26F3B61D00063350 /* Model.swift */; };
 		D1498F5F26F0CAB9006A62BE /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1498F5926F0CAB7006A62BE /* NotoSansKR-Medium.otf */; };
 		D1498F6026F0CAB9006A62BE /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1498F5A26F0CAB8006A62BE /* NotoSansKR-Black.otf */; };
 		D1498F6126F0CAB9006A62BE /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1498F5B26F0CAB8006A62BE /* NotoSansKR-Regular.otf */; };
 		D1498F6226F0CAB9006A62BE /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1498F5C26F0CAB8006A62BE /* NotoSansKR-Thin.otf */; };
 		D1498F6326F0CAB9006A62BE /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1498F5D26F0CAB9006A62BE /* NotoSansKR-Bold.otf */; };
 		D1498F6426F0CAB9006A62BE /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1498F5E26F0CAB9006A62BE /* NotoSansKR-Light.otf */; };
+		D1787FE926F3A74D0043EAB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1787FE826F3A74C0043EAB6 /* GoogleService-Info.plist */; };
 		D1A1E7B626EDFEB3005E9D19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1E7B526EDFEB3005E9D19 /* AppDelegate.swift */; };
 		D1A1E7B826EDFEB3005E9D19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1E7B726EDFEB3005E9D19 /* SceneDelegate.swift */; };
 		D1A1E7BA26EDFEB3005E9D19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1E7B926EDFEB3005E9D19 /* ViewController.swift */; };
@@ -26,15 +30,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B0193F4637DBC13B43D7C2F /* Pods_BusanWelfareProgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusanWelfareProgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60EA59BC446B21E9E0612147 /* Pods-BusanWelfareProgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusanWelfareProgram.debug.xcconfig"; path = "Target Support Files/Pods-BusanWelfareProgram/Pods-BusanWelfareProgram.debug.xcconfig"; sourceTree = "<group>"; };
 		D112475226EF7398002C217A /* SelectGugunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGugunViewController.swift; sourceTree = "<group>"; };
 		D112475526EF7500002C217A /* InfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		D112475726EF750B002C217A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D124713A26F3ADB500063350 /* RequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
+		D124713C26F3B61D00063350 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D1498F5926F0CAB7006A62BE /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		D1498F5A26F0CAB8006A62BE /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
 		D1498F5B26F0CAB8006A62BE /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		D1498F5C26F0CAB8006A62BE /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
 		D1498F5D26F0CAB9006A62BE /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		D1498F5E26F0CAB9006A62BE /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
+		D1787FE826F3A74C0043EAB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1A1E7B226EDFEB3005E9D19 /* BusanWelfareProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusanWelfareProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A1E7B526EDFEB3005E9D19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A1E7B726EDFEB3005E9D19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +53,7 @@
 		D1A1E7C126EDFEB4005E9D19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1A1E7C426EDFEB4005E9D19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A1E7C626EDFEB4005E9D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E182288603E95FE0A621A2A4 /* Pods-BusanWelfareProgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusanWelfareProgram.release.xcconfig"; path = "Target Support Files/Pods-BusanWelfareProgram/Pods-BusanWelfareProgram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,12 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACA27B1AACF279DA1AB9289 /* Pods_BusanWelfareProgram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF18FC33F69F03656C57772A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60EA59BC446B21E9E0612147 /* Pods-BusanWelfareProgram.debug.xcconfig */,
+				E182288603E95FE0A621A2A4 /* Pods-BusanWelfareProgram.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AFC5142F99071B69A93767BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B0193F4637DBC13B43D7C2F /* Pods_BusanWelfareProgram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D112475426EF74D7002C217A /* VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +114,8 @@
 			children = (
 				D1A1E7B426EDFEB3005E9D19 /* BusanWelfareProgram */,
 				D1A1E7B326EDFEB3005E9D19 /* Products */,
+				AF18FC33F69F03656C57772A /* Pods */,
+				AFC5142F99071B69A93767BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,7 +138,10 @@
 				D1A1E7C326EDFEB4005E9D19 /* LaunchScreen.storyboard */,
 				D1A1E7C626EDFEB4005E9D19 /* Info.plist */,
 				D1A1E7BE26EDFEB3005E9D19 /* BusanWelfareProgram.xcdatamodeld */,
+				D1787FE826F3A74C0043EAB6 /* GoogleService-Info.plist */,
 				D1498F5826F0C99D006A62BE /* fonts */,
+				D124713A26F3ADB500063350 /* RequestAPI.swift */,
+				D124713C26F3B61D00063350 /* Model.swift */,
 			);
 			path = BusanWelfareProgram;
 			sourceTree = "<group>";
@@ -120,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1A1E7C926EDFEB4005E9D19 /* Build configuration list for PBXNativeTarget "BusanWelfareProgram" */;
 			buildPhases = (
+				53EB0E271C6294E42AC7A71F /* [CP] Check Pods Manifest.lock */,
 				D1A1E7AE26EDFEB3005E9D19 /* Sources */,
 				D1A1E7AF26EDFEB3005E9D19 /* Frameworks */,
 				D1A1E7B026EDFEB3005E9D19 /* Resources */,
+				B7E766C7E8C923C8C098C15F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +212,7 @@
 				D1A1E7C226EDFEB4005E9D19 /* Assets.xcassets in Resources */,
 				D1498F6026F0CAB9006A62BE /* NotoSansKR-Black.otf in Resources */,
 				D1498F6426F0CAB9006A62BE /* NotoSansKR-Light.otf in Resources */,
+				D1787FE926F3A74D0043EAB6 /* GoogleService-Info.plist in Resources */,
 				D1498F6126F0CAB9006A62BE /* NotoSansKR-Regular.otf in Resources */,
 				D1A1E7BD26EDFEB3005E9D19 /* Main.storyboard in Resources */,
 			);
@@ -184,17 +220,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		53EB0E271C6294E42AC7A71F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BusanWelfareProgram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7E766C7E8C923C8C098C15F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusanWelfareProgram/Pods-BusanWelfareProgram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusanWelfareProgram/Pods-BusanWelfareProgram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BusanWelfareProgram/Pods-BusanWelfareProgram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D1A1E7AE26EDFEB3005E9D19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D124713D26F3B61D00063350 /* Model.swift in Sources */,
 				D112475326EF7398002C217A /* SelectGugunViewController.swift in Sources */,
 				D1A1E7BA26EDFEB3005E9D19 /* ViewController.swift in Sources */,
 				D1A1E7B626EDFEB3005E9D19 /* AppDelegate.swift in Sources */,
 				D112475626EF7500002C217A /* InfoTableViewController.swift in Sources */,
 				D1A1E7C026EDFEB3005E9D19 /* BusanWelfareProgram.xcdatamodeld in Sources */,
 				D1A1E7B826EDFEB3005E9D19 /* SceneDelegate.swift in Sources */,
+				D124713B26F3ADB500063350 /* RequestAPI.swift in Sources */,
 				D112475826EF750B002C217A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +419,7 @@
 		};
 		D1A1E7CA26EDFEB4005E9D19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60EA59BC446B21E9E0612147 /* Pods-BusanWelfareProgram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +439,7 @@
 		};
 		D1A1E7CB26EDFEB4005E9D19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E182288603E95FE0A621A2A4 /* Pods-BusanWelfareProgram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
