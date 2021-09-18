@@ -37,10 +37,10 @@ struct Item: Codable {
     enum CodingKeys: String, CodingKey {
         case cost, target, lat, lng
         case dataDay = "data_day"
-        case gugun = "gugun"
+        case gugun
         case centerNm = "center_nm"
         case addrRoad = "addr_road"
-        case tel = "tel"
+        case tel
         case programNm = "program_nm"
         case programDetail = "program_detail"
         case startDate = "start_date"

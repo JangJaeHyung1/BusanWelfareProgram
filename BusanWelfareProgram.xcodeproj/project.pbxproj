@@ -13,6 +13,7 @@
 		D112475826EF750B002C217A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112475726EF750B002C217A /* DetailViewController.swift */; };
 		D124713B26F3ADB500063350 /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D124713A26F3ADB500063350 /* RequestAPI.swift */; };
 		D124713D26F3B61D00063350 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D124713C26F3B61D00063350 /* Model.swift */; };
+		D124714126F4868700063350 /* CustomInfoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D124714026F4868700063350 /* CustomInfoTableCell.swift */; };
 		D1498F5F26F0CAB9006A62BE /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1498F5926F0CAB7006A62BE /* NotoSansKR-Medium.otf */; };
 		D1498F6026F0CAB9006A62BE /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1498F5A26F0CAB8006A62BE /* NotoSansKR-Black.otf */; };
 		D1498F6126F0CAB9006A62BE /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1498F5B26F0CAB8006A62BE /* NotoSansKR-Regular.otf */; };
@@ -37,6 +38,7 @@
 		D112475726EF750B002C217A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D124713A26F3ADB500063350 /* RequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
 		D124713C26F3B61D00063350 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D124714026F4868700063350 /* CustomInfoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoTableCell.swift; sourceTree = "<group>"; };
 		D1498F5926F0CAB7006A62BE /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		D1498F5A26F0CAB8006A62BE /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
 		D1498F5B26F0CAB8006A62BE /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				D1498F5826F0C99D006A62BE /* fonts */,
 				D124713A26F3ADB500063350 /* RequestAPI.swift */,
 				D124713C26F3B61D00063350 /* Model.swift */,
+				D124714026F4868700063350 /* CustomInfoTableCell.swift */,
 			);
 			path = BusanWelfareProgram;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				D1A1E7B626EDFEB3005E9D19 /* AppDelegate.swift in Sources */,
 				D112475626EF7500002C217A /* InfoTableViewController.swift in Sources */,
 				D1A1E7C026EDFEB3005E9D19 /* BusanWelfareProgram.xcdatamodeld in Sources */,
+				D124714126F4868700063350 /* CustomInfoTableCell.swift in Sources */,
 				D1A1E7B826EDFEB3005E9D19 /* SceneDelegate.swift in Sources */,
 				D124713B26F3ADB500063350 /* RequestAPI.swift in Sources */,
 				D112475826EF750B002C217A /* DetailViewController.swift in Sources */,

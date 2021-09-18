@@ -8,21 +8,54 @@
 import UIKit
 
 class InfoTableViewController: UIViewController{
+    @IBOutlet weak var infoTableView: UITableView!
     
+    var arr: [Item] = []
     var gugun: String? {
         didSet{
-            fetchAPI.shared.getData(numOfRows: 5, PageNo: 1) { flag in
-                print(flag)
+            self.navigationItem.title = gugun
+            self.arr = []
+            fetchAPI.shared.getData(numOfRows: 10, PageNo: 1) { [weak self] jsonArr in
+                for i in 0 ... jsonArr.count-1 {
+                    if jsonArr[i].gugun.contains((self?.gugun)!){
+                        self?.arr.append(jsonArr[i])
+                    }
+                }
+//                self?.arr = jsonArr
+                self?.infoTableView.reloadData()
+                
+                // MARK: - SwiftyJSON 방식
+                //                for i in 1 ... jsonArr!.count-1{
+                //                    guard let jsonArr = jsonArr else { return }
+                //                    let temp = Item(
+                //                        cost: jsonArr[i].dictionaryValue["cost"]!.stringValue,
+                //                        target: jsonArr[i].dictionaryValue["target"]!.stringValue,
+                //                        lat: jsonArr[i].dictionaryValue["lat"]!.stringValue,
+                //                        lng: jsonArr[i].dictionaryValue["lng"]!.stringValue,
+                //                        dataDay: jsonArr[i].dictionaryValue["dataDay"]!.stringValue,
+                //                        gugun: jsonArr[i].dictionaryValue["gugun"]!.stringValue,
+                //                        centerNm: jsonArr[i].dictionaryValue["centerNm"]!.stringValue,
+                //                        addrRoad: jsonArr[i].dictionaryValue["addrRoad"]!.stringValue,
+                //                        tel: jsonArr[i].dictionaryValue["tel"]!.stringValue,
+                //                        programNm: jsonArr[i].dictionaryValue["programNm"]!.stringValue,
+                //                        programDetail: jsonArr[i].dictionaryValue["programDetail"]!.stringValue,
+                //                        startDate: jsonArr[i].dictionaryValue["startDate"]!.stringValue,
+                //                        finishDate: jsonArr[i].dictionaryValue["finishDate"]!.stringValue)
+                //                    self.arr.append(temp)
+                //                }
+                
             }
-//            fetchAPI.shared.getData(numOfRows: <#T##Int#>, PageNo: <#T##Int#>, completion: <#T##(Bool) -> Void#>)
-            print("didset\(gugun)")
         }
     }
-    //변할때마다 출력하기
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "둘러보기"
+        
+        infoTableView.rowHeight = UITableView.automaticDimension;
+        infoTableView.estimatedRowHeight = 500;
+        
+        //        self.navigationItem.title = "둘러보기"
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.leftBarButtonItem = nil;
         self.navigationItem.hidesBackButton = true
@@ -30,7 +63,7 @@ class InfoTableViewController: UIViewController{
         self.navigationItem.rightBarButtonItem?.action = #selector(showSelectGugunVC)
     }
     @objc func showSelectGugunVC(){
-//        UserDefaults.standard.setValue(nil, forKey: "gugun")
+        //        UserDefaults.standard.setValue(nil, forKey: "gugun")
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectGugunViewController") as? SelectGugunViewController{
             vc.modalPresentationStyle = .fullScreen
             vc.delegate = self
@@ -39,8 +72,40 @@ class InfoTableViewController: UIViewController{
     }
 }
 
+// MARK: - sendDataDelegate 구현
 extension InfoTableViewController: SendDataDelegate {
     func sendData(data gugun: String) {
         self.gugun = gugun
     }
+}
+
+// MARK: - TableView delegate, datasouce
+
+extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    
+    //    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        return UITableView.automaticDimension
+    //    }
+    //
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arr.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell: CustomInfoTableCell = tableView.dequeueReusableCell(withIdentifier: "customInfoTableCell", for: indexPath) as? CustomInfoTableCell{
+            cell.programName.text = arr[indexPath.row].programNm
+            cell.programContent.text = arr[indexPath.row].programDetail
+            cell.centerName.text = arr[indexPath.row].centerNm
+            
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+    
 }
