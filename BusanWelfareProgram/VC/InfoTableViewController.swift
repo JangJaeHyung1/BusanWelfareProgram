@@ -15,7 +15,7 @@ class InfoTableViewController: UIViewController{
         didSet{
             self.navigationItem.title = gugun
             self.arr = []
-            fetchAPI.shared.getData(numOfRows: 10, PageNo: 1) { [weak self] jsonArr in
+            fetchAPI.shared.getData(numOfRows: 300, PageNo: 1) { [weak self] jsonArr in
                 for i in 0 ... jsonArr.count-1 {
                     if jsonArr[i].gugun.contains((self?.gugun)!){
                         self?.arr.append(jsonArr[i])
@@ -62,6 +62,10 @@ class InfoTableViewController: UIViewController{
         self.navigationItem.rightBarButtonItem?.target = self
         self.navigationItem.rightBarButtonItem?.action = #selector(showSelectGugunVC)
     }
+    
+    
+    // MARK: - Navigation
+    
     @objc func showSelectGugunVC(){
         //        UserDefaults.standard.setValue(nil, forKey: "gugun")
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectGugunViewController") as? SelectGugunViewController{
@@ -70,6 +74,16 @@ class InfoTableViewController: UIViewController{
             present(vc, animated: true, completion: nil)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue"{
+            let vc = segue.destination as? DetailViewController
+            if let index = sender as? Int{
+                vc?.item = arr[index]
+            }
+        }
+    }
+    
 }
 
 // MARK: - sendDataDelegate 구현
@@ -88,11 +102,16 @@ extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
     //        return UITableView.automaticDimension
     //    }
     //
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arr.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
