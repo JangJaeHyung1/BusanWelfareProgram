@@ -29,6 +29,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationItem.title = "부산사회복지프로그ㄹ"
         
     }
     

@@ -69,33 +69,33 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customInfoTableCell" rowHeight="120" id="j32-Ql-urA" customClass="CustomInfoTableCell" customModule="BusanWelfareProgram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customInfoTableCell" id="j32-Ql-urA" customClass="CustomInfoTableCell" customModule="BusanWelfareProgram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="113.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j32-Ql-urA" id="EtQ-Yb-nbe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="113.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="KAP-pk-PMu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="KAP-pk-PMu">
                                                     <rect key="frame" x="40" y="11" width="334" height="35"/>
                                                     <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C52-hc-kSC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C52-hc-kSC">
                                                     <rect key="frame" x="40" y="51" width="334" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationPin" translatesAutoresizingMaskIntoConstraints="NO" id="E7N-5x-72P">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="locationPin" translatesAutoresizingMaskIntoConstraints="NO" id="E7N-5x-72P">
                                                     <rect key="frame" x="40" y="84.5" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="t6o-aF-dZ6"/>
                                                         <constraint firstAttribute="height" constant="20" id="yRV-hY-yHc"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juB-dK-Ckq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juB-dK-Ckq">
                                                     <rect key="frame" x="65" y="82.5" width="309" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -113,6 +113,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="KAP-pk-PMu" secondAttribute="trailing" constant="20" id="YIf-g7-fZW"/>
                                                 <constraint firstItem="C52-hc-kSC" firstAttribute="top" secondItem="KAP-pk-PMu" secondAttribute="bottom" constant="5" id="euF-jR-tYo"/>
                                                 <constraint firstItem="C52-hc-kSC" firstAttribute="top" secondItem="KAP-pk-PMu" secondAttribute="bottom" constant="5" id="nej-mC-3Wg"/>
+                                                <constraint firstAttribute="bottom" secondItem="juB-dK-Ckq" secondAttribute="bottom" constant="10" id="oat-su-kBi"/>
                                                 <constraint firstItem="juB-dK-Ckq" firstAttribute="leading" secondItem="E7N-5x-72P" secondAttribute="trailing" constant="5" id="xD5-2D-yIS"/>
                                                 <constraint firstItem="E7N-5x-72P" firstAttribute="leading" secondItem="EtQ-Yb-nbe" secondAttribute="leadingMargin" constant="20" id="zfq-vp-8pt"/>
                                             </constraints>

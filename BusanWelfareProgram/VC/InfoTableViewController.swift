@@ -52,8 +52,8 @@ class InfoTableViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        infoTableView.estimatedRowHeight = 120;
         infoTableView.rowHeight = UITableView.automaticDimension;
-        infoTableView.estimatedRowHeight = 500;
         
         //        self.navigationItem.title = "둘러보기"
         self.navigationController?.isNavigationBarHidden = false
@@ -63,6 +63,10 @@ class InfoTableViewController: UIViewController{
         self.navigationItem.rightBarButtonItem?.action = #selector(showSelectGugunVC)
     }
     
+    override func viewDidLayoutSubviews() {
+        infoTableView.estimatedRowHeight = 120;
+        infoTableView.rowHeight = UITableView.automaticDimension;
+    }
     
     // MARK: - Navigation
     
@@ -98,14 +102,14 @@ extension InfoTableViewController: SendDataDelegate {
 extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
     
     
-    //    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-    //        return UITableView.automaticDimension
-    //    }
-    //
+        func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+            return UITableView.automaticDimension
+        }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
-    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 120
+//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arr.count
     }
