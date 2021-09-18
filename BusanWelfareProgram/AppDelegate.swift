@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
-        Thread.sleep(forTimeInterval: 0.2)
+        Thread.sleep(forTimeInterval: 0.6)
         return true
     }
 

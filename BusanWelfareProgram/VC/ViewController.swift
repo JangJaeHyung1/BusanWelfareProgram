@@ -13,9 +13,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.view.backgroundColor = .white
+    }
+    override func viewDidLayoutSubviews() {
         self.view.backgroundColor = .white
     }
-    
     override func viewDidAppear(_ animated: Bool) {
 //        print(gugunUserDefaults)
         if gugunUserDefaults == nil {

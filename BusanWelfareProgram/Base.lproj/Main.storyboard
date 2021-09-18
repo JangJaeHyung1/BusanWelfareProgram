@@ -33,19 +33,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="QFn-7Z-ngZ">
-                                <rect key="frame" x="107" y="318" width="200" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVy-R9-FMm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="QFn-7Z-ngZ">
+                                        <rect key="frame" x="107" y="289" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="mif-5s-BZ5"/>
+                                            <constraint firstAttribute="height" constant="200" id="plb-vu-4oe"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="mif-5s-BZ5"/>
-                                    <constraint firstAttribute="height" constant="200" id="plb-vu-4oe"/>
+                                    <constraint firstItem="QFn-7Z-ngZ" firstAttribute="centerY" secondItem="qVy-R9-FMm" secondAttribute="centerY" constant="-20" id="OlS-AG-SeQ"/>
+                                    <constraint firstItem="QFn-7Z-ngZ" firstAttribute="centerX" secondItem="qVy-R9-FMm" secondAttribute="centerX" id="Q6R-n5-ePb"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QFn-7Z-ngZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="dK0-YL-jfD"/>
-                            <constraint firstItem="QFn-7Z-ngZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="glz-nu-4Yg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qVy-R9-FMm" secondAttribute="bottom" id="PH7-JE-Rer"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qVy-R9-FMm" secondAttribute="trailing" id="Q0D-vT-UCW"/>
+                            <constraint firstItem="qVy-R9-FMm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XeS-UQ-Osu"/>
+                            <constraint firstItem="qVy-R9-FMm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p1X-4C-zHt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -255,7 +268,7 @@
         <!--Detail View Controller-->
         <scene sceneID="aoB-cQ-9VM">
             <objects>
-                <viewController id="KmB-pO-mfJ" customClass="DetailViewController" customModule="BusanWelfareProgram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="KmB-pO-mfJ" customClass="DetailViewController" customModule="BusanWelfareProgram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsm-6o-cNv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
