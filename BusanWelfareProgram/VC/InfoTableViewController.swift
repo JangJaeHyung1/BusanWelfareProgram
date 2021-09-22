@@ -15,7 +15,7 @@ class InfoTableViewController: UIViewController{
         didSet{
             self.navigationItem.title = gugun
             self.arr = []
-            fetchAPI.shared.getData(numOfRows: 300, PageNo: 1) { [weak self] jsonArr in
+            fetchAPI.shared.getData(numOfRows: 1000, PageNo: 1) { [weak self] jsonArr in
                 for i in 0 ... jsonArr.count-1 {
                     if jsonArr[i].gugun.contains((self?.gugun)!){
                         self?.arr.append(jsonArr[i])
@@ -124,7 +124,7 @@ extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
             cell.programName.text = arr[indexPath.row].programNm
             cell.programContent.text = arr[indexPath.row].programDetail
             cell.centerName.text = arr[indexPath.row].centerNm
-            
+            cell.selectionStyle = .none
             return cell
         }
         
