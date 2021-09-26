@@ -8,19 +8,35 @@
 import UIKit
 
 class CustomInfoTableCell: UITableViewCell {
+    
     @IBOutlet weak var programName: UILabel!
-    
     @IBOutlet weak var programContent: UILabel!
-    
     @IBOutlet weak var centerName: UILabel!
+    @IBOutlet weak var cellView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//    }
+    
+    override func layoutSubviews() {
+        cellCustomUI()
+    }
+    
+    func cellCustomUI(){
+        cellView.layer.cornerRadius = 8
+        cellView.clipsToBounds = true
+        cellView.backgroundColor = .white
+        
+        //shadow
+        cellView.layer.shadowColor = UIColor.gray.cgColor
+        cellView.layer.masksToBounds = false
+        cellView.layer.shadowOffset = CGSize(width: 2, height: 2)
+        
+        cellView.layer.shadowRadius = 3 // 반경?
+        cellView.layer.shadowOpacity = 0.2 // alpha값입니다.
     }
 }
