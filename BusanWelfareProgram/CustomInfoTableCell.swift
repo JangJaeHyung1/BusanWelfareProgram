@@ -11,7 +11,13 @@ class CustomInfoTableCell: UITableViewCell {
     
     @IBOutlet weak var programName: UILabel!
     @IBOutlet weak var programContent: UILabel!
+    
     @IBOutlet weak var centerName: UILabel!
+    @IBOutlet weak var targetLbl: UILabel!
+    @IBOutlet weak var cost: UILabel!
+    
+    
+    
     @IBOutlet weak var cellView: UIView!
     
     override func awakeFromNib() {

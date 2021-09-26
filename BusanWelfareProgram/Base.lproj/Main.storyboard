@@ -18,9 +18,6 @@
         <array key="NotoSansKR-Light.otf">
             <string>NotoSansKR-Light</string>
         </array>
-        <array key="NotoSansKR-Medium.otf">
-            <string>NotoSansKR-Medium</string>
-        </array>
         <array key="NotoSansKR-Regular.otf">
             <string>NotoSansKR-Regular</string>
         </array>
@@ -83,56 +80,98 @@
                                 <rect key="frame" x="0.0" y="140" width="428" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customInfoTableCell" rowHeight="149" id="j32-Ql-urA" customClass="CustomInfoTableCell" customModule="BusanWelfareProgram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="149"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customInfoTableCell" rowHeight="213" id="j32-Ql-urA" customClass="CustomInfoTableCell" customModule="BusanWelfareProgram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="213"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j32-Ql-urA" id="EtQ-Yb-nbe">
-                                            <rect key="frame" x="0.0" y="0.0" width="428" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="213"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apz-fK-H02">
-                                                    <rect key="frame" x="16" y="11" width="396" height="135"/>
+                                                    <rect key="frame" x="16" y="11" width="396" height="194"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="KAP-pk-PMu">
-                                                            <rect key="frame" x="20" y="10" width="356" height="35"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAP-pk-PMu">
+                                                            <rect key="frame" x="24" y="16" width="348" height="35"/>
                                                             <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="24"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C52-hc-kSC">
-                                                            <rect key="frame" x="20" y="55" width="356" height="23.333333333333343"/>
-                                                            <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="16"/>
-                                                            <color key="textColor" red="0.019724125299999999" green="0.105891861" blue="0.016191414790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <rect key="frame" x="24" y="55" width="348" height="23.333333333333343"/>
+                                                            <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="18"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juB-dK-Ckq">
+                                                            <rect key="frame" x="60" y="137" width="61" height="23.333333333333314"/>
+                                                            <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="16"/>
                                                             <color key="highlightedColor" systemColor="systemGrayColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="locationPin" translatesAutoresizingMaskIntoConstraints="NO" id="E7N-5x-72P">
-                                                            <rect key="frame" x="20" y="88.333333333333329" width="14" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="장소 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aD-ED-hQv">
+                                                            <rect key="frame" x="20" y="138" width="37" height="23.333333333333343"/>
+                                                            <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="16"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-3M-FFA">
+                                                            <rect key="frame" x="20.000000000000004" y="111.33333333333334" width="42.333333333333343" height="23.333333333333343"/>
+                                                            <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="16"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pR5-Rw-iyW">
+                                                            <rect key="frame" x="0.0" y="94.333333333333329" width="396" height="1"/>
+                                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="14" id="AGd-de-z7q"/>
-                                                                <constraint firstAttribute="width" constant="14" id="HVV-8g-Yjx"/>
+                                                                <constraint firstAttribute="height" constant="1" id="Fhd-71-tQg"/>
                                                             </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juB-dK-Ckq">
-                                                            <rect key="frame" x="44" y="88.333333333333343" width="332" height="20.333333333333329"/>
-                                                            <fontDescription key="fontDescription" name="NotoSansKR-Medium" family="Noto Sans KR" pointSize="14"/>
-                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="highlightedColor" systemColor="systemGrayColor"/>
+                                                        </view>
+                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuA-rd-G6e">
+                                                            <rect key="frame" x="248" y="157" width="140" height="40"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.38021355870000001" blue="0.70415294169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="AQS-3y-Yer"/>
+                                                                <constraint firstAttribute="width" constant="140" id="lUq-g2-UvY"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="상세보기">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-61-qm9">
+                                                            <rect key="frame" x="20" y="165" width="29.666666666666671" height="23.333333333333343"/>
+                                                            <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="16"/>
+                                                            <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="KAP-pk-PMu" secondAttribute="trailing" constant="20" id="0hB-Ut-lZG"/>
-                                                        <constraint firstItem="C52-hc-kSC" firstAttribute="top" secondItem="KAP-pk-PMu" secondAttribute="bottom" constant="10" id="5Kp-9M-IQS"/>
-                                                        <constraint firstAttribute="trailing" secondItem="C52-hc-kSC" secondAttribute="trailing" constant="20" id="Foi-ca-3eY"/>
-                                                        <constraint firstItem="E7N-5x-72P" firstAttribute="leading" secondItem="apz-fK-H02" secondAttribute="leading" constant="20" id="MOz-pe-l8b"/>
-                                                        <constraint firstItem="E7N-5x-72P" firstAttribute="top" secondItem="C52-hc-kSC" secondAttribute="bottom" constant="10" id="RvF-5n-6zA"/>
-                                                        <constraint firstItem="juB-dK-Ckq" firstAttribute="leading" secondItem="E7N-5x-72P" secondAttribute="trailing" constant="10" id="XUV-Jh-pEJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KAP-pk-PMu" secondAttribute="trailing" constant="24" id="0hB-Ut-lZG"/>
+                                                        <constraint firstItem="cuA-rd-G6e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="juB-dK-Ckq" secondAttribute="trailing" constant="10" id="1S4-Li-Kwn"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iAN-3M-FFA" secondAttribute="trailing" constant="10" id="2Uh-8c-EGG"/>
+                                                        <constraint firstItem="C52-hc-kSC" firstAttribute="top" secondItem="KAP-pk-PMu" secondAttribute="bottom" constant="4" id="5Kp-9M-IQS"/>
+                                                        <constraint firstItem="cuA-rd-G6e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LzW-61-qm9" secondAttribute="trailing" constant="10" id="5n5-Eb-9IZ"/>
+                                                        <constraint firstItem="LzW-61-qm9" firstAttribute="top" secondItem="4aD-ED-hQv" secondAttribute="bottom" constant="2" id="Acd-7M-K9a"/>
+                                                        <constraint firstAttribute="trailing" secondItem="pR5-Rw-iyW" secondAttribute="trailing" id="CcW-Lb-zKk"/>
+                                                        <constraint firstItem="4aD-ED-hQv" firstAttribute="top" secondItem="iAN-3M-FFA" secondAttribute="bottom" constant="2" id="DZq-vT-49h"/>
+                                                        <constraint firstAttribute="trailing" secondItem="C52-hc-kSC" secondAttribute="trailing" constant="24" id="Foi-ca-3eY"/>
+                                                        <constraint firstItem="iAN-3M-FFA" firstAttribute="top" secondItem="pR5-Rw-iyW" secondAttribute="bottom" constant="16" id="OMm-BP-ziK"/>
+                                                        <constraint firstItem="pR5-Rw-iyW" firstAttribute="top" secondItem="C52-hc-kSC" secondAttribute="bottom" constant="16" id="T3w-9L-7Sf"/>
+                                                        <constraint firstAttribute="bottom" secondItem="LzW-61-qm9" secondAttribute="bottom" constant="16" id="Yqb-jx-QaX"/>
                                                         <constraint firstItem="KAP-pk-PMu" firstAttribute="top" secondItem="apz-fK-H02" secondAttribute="top" constant="16" id="btw-NS-EGm"/>
-                                                        <constraint firstItem="juB-dK-Ckq" firstAttribute="top" secondItem="C52-hc-kSC" secondAttribute="bottom" constant="10" id="ePA-tw-6gR"/>
-                                                        <constraint firstItem="KAP-pk-PMu" firstAttribute="leading" secondItem="apz-fK-H02" secondAttribute="leading" constant="20" id="tXV-YW-VIa"/>
-                                                        <constraint firstAttribute="trailing" secondItem="juB-dK-Ckq" secondAttribute="trailing" constant="20" id="uGZ-ay-JAn"/>
-                                                        <constraint firstItem="C52-hc-kSC" firstAttribute="leading" secondItem="apz-fK-H02" secondAttribute="leading" constant="20" id="w2I-SH-bQt"/>
-                                                        <constraint firstAttribute="bottom" secondItem="juB-dK-Ckq" secondAttribute="bottom" constant="16" id="zoe-cD-9zV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cuA-rd-G6e" secondAttribute="trailing" constant="16" id="la9-xb-H0G"/>
+                                                        <constraint firstItem="pR5-Rw-iyW" firstAttribute="leading" secondItem="apz-fK-H02" secondAttribute="leading" id="o6c-Ts-Ag2"/>
+                                                        <constraint firstItem="juB-dK-Ckq" firstAttribute="leading" secondItem="4aD-ED-hQv" secondAttribute="trailing" constant="3" id="pfh-0u-lf2"/>
+                                                        <constraint firstItem="iAN-3M-FFA" firstAttribute="leading" secondItem="apz-fK-H02" secondAttribute="leading" constant="20" id="qH1-95-TKe"/>
+                                                        <constraint firstItem="LzW-61-qm9" firstAttribute="leading" secondItem="apz-fK-H02" secondAttribute="leading" constant="20" id="qa0-Y8-gEf"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cuA-rd-G6e" secondAttribute="bottom" constant="14" id="qck-a8-8EU"/>
+                                                        <constraint firstItem="juB-dK-Ckq" firstAttribute="top" secondItem="iAN-3M-FFA" secondAttribute="bottom" constant="2" id="sY1-1i-TQx"/>
+                                                        <constraint firstItem="KAP-pk-PMu" firstAttribute="leading" secondItem="apz-fK-H02" secondAttribute="leading" constant="24" id="tXV-YW-VIa"/>
+                                                        <constraint firstItem="4aD-ED-hQv" firstAttribute="leading" secondItem="apz-fK-H02" secondAttribute="leading" constant="20" id="umT-HN-gND"/>
+                                                        <constraint firstItem="C52-hc-kSC" firstAttribute="leading" secondItem="apz-fK-H02" secondAttribute="leading" constant="24" id="w2I-SH-bQt"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -140,7 +179,7 @@
                                                 <constraint firstItem="apz-fK-H02" firstAttribute="topMargin" secondItem="EtQ-Yb-nbe" secondAttribute="topMargin" constant="8" id="529-qN-vgr"/>
                                                 <constraint firstItem="apz-fK-H02" firstAttribute="trailing" secondItem="EtQ-Yb-nbe" secondAttribute="trailingMargin" constant="4" id="61T-iX-AwS"/>
                                                 <constraint firstItem="apz-fK-H02" firstAttribute="leading" secondItem="EtQ-Yb-nbe" secondAttribute="leadingMargin" constant="-4" id="HXa-Ub-Gbh"/>
-                                                <constraint firstItem="apz-fK-H02" firstAttribute="bottom" secondItem="EtQ-Yb-nbe" secondAttribute="bottomMargin" constant="8" id="Z8k-dL-Ajx"/>
+                                                <constraint firstItem="apz-fK-H02" firstAttribute="bottom" secondItem="EtQ-Yb-nbe" secondAttribute="bottomMargin" constant="3" id="Z8k-dL-Ajx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,8 +187,10 @@
                                         <connections>
                                             <outlet property="cellView" destination="apz-fK-H02" id="BUe-8g-u6M"/>
                                             <outlet property="centerName" destination="juB-dK-Ckq" id="2zU-Rh-Etm"/>
+                                            <outlet property="cost" destination="LzW-61-qm9" id="NDJ-3K-nFz"/>
                                             <outlet property="programContent" destination="C52-hc-kSC" id="ySD-8p-gRa"/>
                                             <outlet property="programName" destination="KAP-pk-PMu" id="cHW-nA-aFi"/>
+                                            <outlet property="targetLbl" destination="iAN-3M-FFA" id="YgP-bD-8h4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -545,12 +586,14 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="loading" width="341.33334350585938" height="341.33334350585938"/>
-        <image name="locationPin" width="112" height="165"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -116,11 +116,17 @@ extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: CustomInfoTableCell = tableView.dequeueReusableCell(withIdentifier: "customInfoTableCell", for: indexPath) as! CustomInfoTableCell
+        
         cell.programName.text = arr[indexPath.row].programNm
         cell.programContent.text = arr[indexPath.row].programDetail
+        
         cell.centerName.text = arr[indexPath.row].centerNm
+        cell.targetLbl.text = "대상 : \(arr[indexPath.row].target)"
+        cell.cost.text = "비용 : \(arr[indexPath.row].cost)"
+        
         cell.selectionStyle = .none
         cell.backgroundColor = .init(rgb: 0xFAFAFA)
+        
         return cell
     }
 }
