@@ -5,7 +5,7 @@
 
 UI/UX design : https://www.figma.com/proto/muCIJZBSmkrVQTy3wri48k/부산-사회복지-프로그램-어플?node-id=5%3A6&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A6
 
-- 필요기능: infinite scroll fetch api, 선택 스크롤, core date 지역구 데이터 저장, 지도 표시 정도.
+- 필요기능: fetch 공공api data, 지역구 선택 pickerView UI custom, 선택된 지역구 UserDefaults에 저장, 지도 표시 정도.
 - 검색기능: 보류
 
 작업기간: 2021.09.11~
