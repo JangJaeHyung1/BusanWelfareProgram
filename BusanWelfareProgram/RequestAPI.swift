@@ -7,15 +7,16 @@
 
 import Foundation
 import Alamofire
-//import SwiftyJSON
+import SwiftyJSON
 
 struct fetchAPI {
     private init() { }
     static let shared = fetchAPI()
     func getData(numOfRows: Int, PageNo: Int, completion: @escaping (_ data: [Item]) -> Void) {
         
-        guard let encodingKey = Bundle.main.object(forInfoDictionaryKey: "API_KEY") as? String else { return }
+        let encodingKey = "hCz7%2BB%2FFviDA47%2BCEmCuym%2BhkX8TNAW9aAshOCncVR5MFyI6euaqvskw90ykrYnJfDtJzsRtvGTwcE811KF%2FxQ%3D%3D"
         
+        //        let url = "http://apis.data.go.kr/6260000/SocialWelfareCenterProgramService/getProgramInfo?serviceKey=hCz7%2BB%2FFviDA47%2BCEmCuym%2BhkX8TNAW9aAshOCncVR5MFyI6euaqvskw90ykrYnJfDtJzsRtvGTwcE811KF%2FxQ%3D%3D&numOfRows=5&pageNo=1&resultType=json"
         
         let url = "http://apis.data.go.kr/6260000/SocialWelfareCenterProgramService/getProgramInfo?serviceKey=\(encodingKey)&numOfRows=\(numOfRows)&pageNo=\(PageNo)&resultType=json"
         
@@ -26,7 +27,7 @@ struct fetchAPI {
             
             switch response.result {
             
-            case .success(_):
+            case .success(let jsonData):
                 guard let data = response.data else { return }
                 do {
                     let decoder = JSONDecoder()

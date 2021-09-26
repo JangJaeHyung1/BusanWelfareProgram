@@ -45,7 +45,6 @@
 		D1498F5C26F0CAB8006A62BE /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
 		D1498F5D26F0CAB9006A62BE /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		D1498F5E26F0CAB9006A62BE /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
-		D153878A270096FA000E8AF0 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		D1787FE826F3A74C0043EAB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1A1E7B226EDFEB3005E9D19 /* BusanWelfareProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusanWelfareProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A1E7B526EDFEB3005E9D19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +114,6 @@
 		D1A1E7A926EDFEB3005E9D19 = {
 			isa = PBXGroup;
 			children = (
-				D153878A270096FA000E8AF0 /* Secrets.xcconfig */,
 				D1A1E7B426EDFEB3005E9D19 /* BusanWelfareProgram */,
 				D1A1E7B326EDFEB3005E9D19 /* Products */,
 				AF18FC33F69F03656C57772A /* Pods */,
@@ -309,7 +307,6 @@
 /* Begin XCBuildConfiguration section */
 		D1A1E7C726EDFEB4005E9D19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D153878A270096FA000E8AF0 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -371,7 +368,6 @@
 		};
 		D1A1E7C826EDFEB4005E9D19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D153878A270096FA000E8AF0 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
