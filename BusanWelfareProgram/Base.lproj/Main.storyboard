@@ -151,7 +151,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="KAP-pk-PMu" secondAttribute="trailing" constant="24" id="0hB-Ut-lZG"/>
                                                         <constraint firstItem="cuA-rd-G6e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="juB-dK-Ckq" secondAttribute="trailing" constant="10" id="1S4-Li-Kwn"/>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iAN-3M-FFA" secondAttribute="trailing" constant="10" id="2Uh-8c-EGG"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iAN-3M-FFA" secondAttribute="trailing" constant="20" id="2Uh-8c-EGG"/>
                                                         <constraint firstItem="C52-hc-kSC" firstAttribute="top" secondItem="KAP-pk-PMu" secondAttribute="bottom" constant="4" id="5Kp-9M-IQS"/>
                                                         <constraint firstItem="cuA-rd-G6e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LzW-61-qm9" secondAttribute="trailing" constant="10" id="5n5-Eb-9IZ"/>
                                                         <constraint firstItem="LzW-61-qm9" firstAttribute="top" secondItem="4aD-ED-hQv" secondAttribute="bottom" constant="2" id="Acd-7M-K9a"/>
@@ -354,7 +354,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대상" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbz-6O-nhk">
-                                                <rect key="frame" x="84.666666666666671" y="166.33333333333334" width="29.666666666666671" height="23.333333333333343"/>
+                                                <rect key="frame" x="87.666666666666671" y="166.33333333333334" width="29.666666666666671" height="23.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -366,7 +366,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기간" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkY-dB-kPa">
-                                                <rect key="frame" x="84.666666666666671" y="199.66666666666669" width="29.666666666666671" height="23.333333333333343"/>
+                                                <rect key="frame" x="87.666666666666671" y="199.66666666666669" width="29.666666666666671" height="23.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -378,7 +378,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlO-S3-bBL">
-                                                <rect key="frame" x="84.666666666666671" y="233" width="29.666666666666671" height="23.333333333333314"/>
+                                                <rect key="frame" x="87.666666666666671" y="233" width="29.666666666666671" height="23.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -397,7 +397,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기관" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4d-SK-n9P">
-                                                <rect key="frame" x="84.666666666666671" y="318.33333333333331" width="29.666666666666671" height="23.333333333333314"/>
+                                                <rect key="frame" x="87.666666666666671" y="318.33333333333331" width="29.666666666666671" height="23.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -435,7 +435,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5w-vt-geY">
-                                                <rect key="frame" x="84.666666666666671" y="385" width="29.666666666666671" height="23.333333333333314"/>
+                                                <rect key="frame" x="87.666666666666671" y="385" width="29.666666666666671" height="23.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -450,7 +450,7 @@
                                                 </connections>
                                             </mapView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gl-x5-6wd">
-                                                <rect key="frame" x="84.666666666666671" y="351.66666666666669" width="29.666666666666671" height="23.333333333333314"/>
+                                                <rect key="frame" x="87.666666666666671" y="351.66666666666669" width="29.666666666666671" height="23.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -460,8 +460,8 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="xLZ-sn-3Ra" secondAttribute="trailing" constant="45" id="1Uh-xt-SqO"/>
                                             <constraint firstItem="ASv-4W-FuP" firstAttribute="top" secondItem="tHa-hE-rhg" secondAttribute="bottom" constant="10" id="22I-Pp-Ed4"/>
-                                            <constraint firstItem="wkY-dB-kPa" firstAttribute="leading" secondItem="NwD-5i-faM" secondAttribute="trailing" constant="5" id="4RS-rx-3Bp"/>
-                                            <constraint firstItem="sbz-6O-nhk" firstAttribute="leading" secondItem="TbF-73-fqm" secondAttribute="trailing" constant="5" id="68j-Z6-th5"/>
+                                            <constraint firstItem="wkY-dB-kPa" firstAttribute="leading" secondItem="NwD-5i-faM" secondAttribute="trailing" constant="8" id="4RS-rx-3Bp"/>
+                                            <constraint firstItem="sbz-6O-nhk" firstAttribute="leading" secondItem="TbF-73-fqm" secondAttribute="trailing" constant="8" id="68j-Z6-th5"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="g5w-vt-geY" secondAttribute="trailing" constant="50" id="6NL-uM-SeW"/>
                                             <constraint firstItem="5Zy-e8-8cK" firstAttribute="top" secondItem="v9z-6e-WF0" secondAttribute="bottom" constant="20" id="8Pq-fx-HRu"/>
                                             <constraint firstItem="fhd-yQ-hB7" firstAttribute="top" secondItem="LX3-6j-VQC" secondAttribute="top" constant="20" id="9lB-41-aMv"/>
@@ -475,19 +475,19 @@
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O4d-SK-n9P" secondAttribute="trailing" constant="50" id="L7m-36-JPS"/>
                                             <constraint firstItem="tHa-hE-rhg" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="NKk-Zm-ugt"/>
                                             <constraint firstItem="O4d-SK-n9P" firstAttribute="top" secondItem="xLZ-sn-3Ra" secondAttribute="bottom" constant="30" id="Pe1-I0-vgf"/>
-                                            <constraint firstItem="O4d-SK-n9P" firstAttribute="leading" secondItem="k6u-Rn-I8H" secondAttribute="trailing" constant="5" id="RIi-Zc-KQg"/>
+                                            <constraint firstItem="O4d-SK-n9P" firstAttribute="leading" secondItem="k6u-Rn-I8H" secondAttribute="trailing" constant="8" id="RIi-Zc-KQg"/>
                                             <constraint firstItem="DgO-KO-xQQ" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="S9J-vB-fl2"/>
                                             <constraint firstItem="tHa-hE-rhg" firstAttribute="top" secondItem="k6u-Rn-I8H" secondAttribute="bottom" constant="10" id="Swe-oo-Scv"/>
                                             <constraint firstAttribute="trailing" secondItem="5Zy-e8-8cK" secondAttribute="trailing" constant="40" id="WXt-Qs-fiW"/>
                                             <constraint firstItem="rdW-42-Hrd" firstAttribute="top" secondItem="NwD-5i-faM" secondAttribute="bottom" constant="10" id="Wqd-Lr-Tc0"/>
                                             <constraint firstItem="xLZ-sn-3Ra" firstAttribute="top" secondItem="rdW-42-Hrd" secondAttribute="bottom" constant="30" id="X3o-PE-PL3"/>
-                                            <constraint firstItem="zlO-S3-bBL" firstAttribute="leading" secondItem="rdW-42-Hrd" secondAttribute="trailing" constant="5" id="XiO-Ev-v8d"/>
+                                            <constraint firstItem="zlO-S3-bBL" firstAttribute="leading" secondItem="rdW-42-Hrd" secondAttribute="trailing" constant="8" id="XiO-Ev-v8d"/>
                                             <constraint firstItem="TbF-73-fqm" firstAttribute="top" secondItem="DgO-KO-xQQ" secondAttribute="bottom" constant="50" id="XnA-qd-gwT"/>
                                             <constraint firstItem="fhd-yQ-hB7" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="ZUg-c9-G5e"/>
                                             <constraint firstItem="rdW-42-Hrd" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="cQB-9A-2S2"/>
-                                            <constraint firstItem="g5w-vt-geY" firstAttribute="leading" secondItem="ASv-4W-FuP" secondAttribute="trailing" constant="5" id="do5-fU-G2B"/>
+                                            <constraint firstItem="g5w-vt-geY" firstAttribute="leading" secondItem="ASv-4W-FuP" secondAttribute="trailing" constant="8" id="do5-fU-G2B"/>
                                             <constraint firstItem="5Zy-e8-8cK" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="40" id="fHT-qd-c9K"/>
-                                            <constraint firstItem="8Gl-x5-6wd" firstAttribute="leading" secondItem="tHa-hE-rhg" secondAttribute="trailing" constant="5" id="gMZ-IH-IEj"/>
+                                            <constraint firstItem="8Gl-x5-6wd" firstAttribute="leading" secondItem="tHa-hE-rhg" secondAttribute="trailing" constant="8" id="gMZ-IH-IEj"/>
                                             <constraint firstItem="8Gl-x5-6wd" firstAttribute="top" secondItem="O4d-SK-n9P" secondAttribute="bottom" constant="10" id="hBH-gd-gAK"/>
                                             <constraint firstItem="xLZ-sn-3Ra" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="45" id="hpc-EY-SWj"/>
                                             <constraint firstItem="wkY-dB-kPa" firstAttribute="top" secondItem="sbz-6O-nhk" secondAttribute="bottom" constant="10" id="hvP-2x-6ww"/>
