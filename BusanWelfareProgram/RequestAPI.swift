@@ -7,7 +7,7 @@
 
 import Foundation
 import Alamofire
-//import SwiftyJSON
+
 
 struct fetchAPI {
     private init() { }
@@ -20,28 +20,17 @@ struct fetchAPI {
         
         
         AF.request(url, method: .get).responseJSON { response in
-            //            print("response: \(response)")
-            
-            
             switch response.result {
-            
+                
             case .success(_):
                 guard let data = response.data else { return }
                 do {
                     let decoder = JSONDecoder()
                     let welfareData = try decoder.decode(WelfareData.self, from: data)
-                    //                    print(welfareData.getProgramInfo.item)
+                    //print(welfareData.getProgramInfo.item)
                     completion(welfareData.getProgramInfo.item)
                 } catch { print("error \(error)") }
                 
-                
-            // MARK: - SwiftyJSON 방식
-            //                let json = JSON(jsonData)
-            //                let result = json["getProgramInfo"].dictionaryValue["item"]?.arrayValue
-            //                print(result!.count)
-            //                completion(result)
-            
-            
             case .failure(let error):
                 print("errorCode: \(error._code)")
                 print("errorDescription: \(error.errorDescription!)")

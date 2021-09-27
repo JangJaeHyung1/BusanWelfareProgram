@@ -190,6 +190,7 @@
                                             <outlet property="cost" destination="LzW-61-qm9" id="NDJ-3K-nFz"/>
                                             <outlet property="programContent" destination="C52-hc-kSC" id="ySD-8p-gRa"/>
                                             <outlet property="programName" destination="KAP-pk-PMu" id="cHW-nA-aFi"/>
+                                            <outlet property="showDetailBtn" destination="cuA-rd-G6e" id="6dZ-I3-CvJ"/>
                                             <outlet property="targetLbl" destination="iAN-3M-FFA" id="YgP-bD-8h4"/>
                                         </connections>
                                     </tableViewCell>

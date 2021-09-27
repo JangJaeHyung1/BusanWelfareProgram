@@ -16,7 +16,7 @@ class CustomInfoTableCell: UITableViewCell {
     @IBOutlet weak var targetLbl: UILabel!
     @IBOutlet weak var cost: UILabel!
     
-    
+    @IBOutlet weak var showDetailBtn: UIButton!
     
     @IBOutlet weak var cellView: UIView!
     
@@ -42,7 +42,7 @@ class CustomInfoTableCell: UITableViewCell {
         cellView.layer.masksToBounds = false
         cellView.layer.shadowOffset = CGSize(width: 2, height: 2)
         
-        cellView.layer.shadowRadius = 3 // 반경?
-        cellView.layer.shadowOpacity = 0.2 // alpha값입니다.
+        cellView.layer.shadowRadius = 3 
+        cellView.layer.shadowOpacity = 0.2
     }
 }

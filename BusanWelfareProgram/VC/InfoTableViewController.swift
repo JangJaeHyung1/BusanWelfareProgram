@@ -21,29 +21,7 @@ class InfoTableViewController: UIViewController{
                         self?.arr.append(jsonArr[i])
                     }
                 }
-                //                self?.arr = jsonArr
                 self?.infoTableView.reloadData()
-                
-                // MARK: - SwiftyJSON 방식
-                //                for i in 1 ... jsonArr!.count-1{
-                //                    guard let jsonArr = jsonArr else { return }
-                //                    let temp = Item(
-                //                        cost: jsonArr[i].dictionaryValue["cost"]!.stringValue,
-                //                        target: jsonArr[i].dictionaryValue["target"]!.stringValue,
-                //                        lat: jsonArr[i].dictionaryValue["lat"]!.stringValue,
-                //                        lng: jsonArr[i].dictionaryValue["lng"]!.stringValue,
-                //                        dataDay: jsonArr[i].dictionaryValue["dataDay"]!.stringValue,
-                //                        gugun: jsonArr[i].dictionaryValue["gugun"]!.stringValue,
-                //                        centerNm: jsonArr[i].dictionaryValue["centerNm"]!.stringValue,
-                //                        addrRoad: jsonArr[i].dictionaryValue["addrRoad"]!.stringValue,
-                //                        tel: jsonArr[i].dictionaryValue["tel"]!.stringValue,
-                //                        programNm: jsonArr[i].dictionaryValue["programNm"]!.stringValue,
-                //                        programDetail: jsonArr[i].dictionaryValue["programDetail"]!.stringValue,
-                //                        startDate: jsonArr[i].dictionaryValue["startDate"]!.stringValue,
-                //                        finishDate: jsonArr[i].dictionaryValue["finishDate"]!.stringValue)
-                //                    self.arr.append(temp)
-                //                }
-                
             }
         }
     }
@@ -51,11 +29,7 @@ class InfoTableViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        infoTableView.estimatedRowHeight = 120;
-//        infoTableView.rowHeight = UITableView.automaticDimension;
-        
-        //        self.navigationItem.title = "둘러보기"
+
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.leftBarButtonItem = nil;
         self.navigationItem.hidesBackButton = true
@@ -86,6 +60,14 @@ class InfoTableViewController: UIViewController{
         }
     }
     
+    @objc func showDetailVC(sender: UIButton){
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController{
+            
+            vc.item = arr[sender.tag]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 }
 
 // MARK: - sendDataDelegate 구현
@@ -110,7 +92,7 @@ extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
+//        performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -126,6 +108,11 @@ extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.selectionStyle = .none
         cell.backgroundColor = .init(rgb: 0xFAFAFA)
+        
+        cell.showDetailBtn.tag = indexPath.row
+        cell.showDetailBtn.addTarget(self,
+                                     action: #selector(showDetailVC(sender:)),
+                                     for: .touchUpInside)
         
         return cell
     }
