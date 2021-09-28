@@ -101,7 +101,7 @@
                                                             <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="18"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juB-dK-Ckq">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="juB-dK-Ckq">
                                                             <rect key="frame" x="60" y="137" width="61" height="23.333333333333314"/>
                                                             <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="16"/>
                                                             <color key="highlightedColor" systemColor="systemGrayColor"/>
@@ -112,7 +112,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-3M-FFA">
-                                                            <rect key="frame" x="20.000000000000004" y="111.33333333333334" width="42.333333333333343" height="23.333333333333343"/>
+                                                            <rect key="frame" x="20.000000000000004" y="111.33333333333334" width="41.333333333333343" height="23.333333333333343"/>
                                                             <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="16"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -141,7 +141,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-61-qm9">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-61-qm9">
                                                             <rect key="frame" x="20" y="165" width="29.666666666666671" height="23.333333333333343"/>
                                                             <fontDescription key="fontDescription" name="NotoSansKR-Light" family="Noto Sans KR" pointSize="16"/>
                                                             <nil key="highlightedColor"/>
@@ -336,6 +336,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LX3-6j-VQC">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="819.33333333333337"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtt-fy-et1">
+                                                <rect key="frame" x="45" y="42.333333333333343" width="60" height="6"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="6" id="8uO-UU-Rhf"/>
+                                                    <constraint firstAttribute="width" constant="60" id="L14-3N-8hg"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhd-yQ-hB7">
                                                 <rect key="frame" x="50" y="20" width="37" height="29"/>
                                                 <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
@@ -465,6 +473,7 @@
                                             <constraint firstItem="sbz-6O-nhk" firstAttribute="leading" secondItem="TbF-73-fqm" secondAttribute="trailing" constant="8" id="68j-Z6-th5"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="g5w-vt-geY" secondAttribute="trailing" constant="50" id="6NL-uM-SeW"/>
                                             <constraint firstItem="5Zy-e8-8cK" firstAttribute="top" secondItem="v9z-6e-WF0" secondAttribute="bottom" constant="20" id="8Pq-fx-HRu"/>
+                                            <constraint firstItem="Dtt-fy-et1" firstAttribute="leading" secondItem="fhd-yQ-hB7" secondAttribute="leading" constant="-5" id="8RG-iN-dNc"/>
                                             <constraint firstItem="fhd-yQ-hB7" firstAttribute="top" secondItem="LX3-6j-VQC" secondAttribute="top" constant="20" id="9lB-41-aMv"/>
                                             <constraint firstItem="sbz-6O-nhk" firstAttribute="top" secondItem="DgO-KO-xQQ" secondAttribute="bottom" constant="50" id="Ai2-GE-tXT"/>
                                             <constraint firstItem="v9z-6e-WF0" firstAttribute="top" secondItem="ASv-4W-FuP" secondAttribute="bottom" constant="50" id="D2G-nZ-z1A"/>
@@ -502,6 +511,7 @@
                                             <constraint firstItem="TbF-73-fqm" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="rmh-Af-4ES"/>
                                             <constraint firstItem="NwD-5i-faM" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="sCS-Nu-s5c"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wkY-dB-kPa" secondAttribute="trailing" constant="50" id="tJv-Pg-FxZ"/>
+                                            <constraint firstItem="Dtt-fy-et1" firstAttribute="firstBaseline" secondItem="fhd-yQ-hB7" secondAttribute="firstBaseline" constant="-1" id="x0L-XR-qqw"/>
                                             <constraint firstItem="NwD-5i-faM" firstAttribute="top" secondItem="sbz-6O-nhk" secondAttribute="bottom" constant="10" id="xxF-lQ-R9e"/>
                                             <constraint firstItem="DgO-KO-xQQ" firstAttribute="top" secondItem="fhd-yQ-hB7" secondAttribute="bottom" constant="15" id="yEl-gI-cbU"/>
                                             <constraint firstItem="zlO-S3-bBL" firstAttribute="top" secondItem="wkY-dB-kPa" secondAttribute="bottom" constant="10" id="zSI-ye-j05"/>
@@ -598,6 +608,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
