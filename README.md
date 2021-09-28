@@ -8,3 +8,4 @@ UI/UX design : https://www.figma.com/proto/muCIJZBSmkrVQTy3wri48k/부산-사회�
 - 필요기능: fetch 공공api data, 지역구 선택 pickerView UI custom, 선택된 지역구 UserDefaults에 저장, 지도 표시, tableView cell UI custom
 - 모델패턴: MVC 패턴
 
+시연 영상 - https://youtu.be/RASRbEVTOTQ
