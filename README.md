@@ -12,10 +12,10 @@ UI/UX design : https://www.figma.com/proto/muCIJZBSmkrVQTy3wri48k/부산-사회�
 
 시현 이미지
 
-1. 로딩 페이지
+1. loading
 <img width="481" alt="1" src="https://user-images.githubusercontent.com/37135479/135082644-87d49e78-dc8d-4c5a-b897-0ad377c016e5.png">
 
-2. 지역선택 페이지
+2. pickerVC
 <img width="481" alt="2" src="https://user-images.githubusercontent.com/37135479/135082766-858dda15-fc5e-4a9a-894e-a897cc67192a.png">
 
 3. tableVC
