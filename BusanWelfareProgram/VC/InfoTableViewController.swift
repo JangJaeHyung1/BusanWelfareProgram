@@ -8,7 +8,9 @@
 import UIKit
 
 class InfoTableViewController: UIViewController{
+    
     @IBOutlet weak var infoTableView: UITableView!
+    var biggestTopSafeAreaInset: CGFloat = 0
     
     var arr: [Item] = []
     var gugun: String? {
@@ -23,24 +25,28 @@ class InfoTableViewController: UIViewController{
                         self?.arr.append(jsonArr[i])
                     }
                 }
+                
                 self?.infoTableView.reloadData()
-                self?.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: true)
+                self?.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
             }
         }
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationUISetting()
+    }
 
+    func navigationUISetting(){
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.leftBarButtonItem = nil;
         self.navigationItem.hidesBackButton = true
         self.navigationItem.rightBarButtonItem?.target = self
         self.navigationItem.rightBarButtonItem?.action = #selector(showSelectGugunVC)
     }
-
-    
 
     
     // MARK: - Navigation
@@ -69,6 +75,20 @@ class InfoTableViewController: UIViewController{
             vc.item = arr[sender.tag]
             self.navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    
+    
+    // MARK: - scrollToTop and show Large Title
+    
+    override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
+        self.biggestTopSafeAreaInset = max(infoTableView.safeAreaInsets.top, biggestTopSafeAreaInset)
+    }
+    
+    func scrollToTop(animated: Bool) {
+//        infoTableView.scro
+        infoTableView.setContentOffset(CGPoint(x: 0, y: -biggestTopSafeAreaInset), animated: animated)
     }
     
 }

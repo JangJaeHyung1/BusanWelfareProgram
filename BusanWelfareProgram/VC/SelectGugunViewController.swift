@@ -37,6 +37,9 @@ class SelectGugunViewController: UIViewController {
         super.viewDidLoad()
         savedGugun = UserDefaults.standard.string(forKey: "gugun")
         self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.largeTitleDisplayMode = .always
+
     }
     
     // MARK: - segue

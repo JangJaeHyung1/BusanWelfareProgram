@@ -96,7 +96,7 @@ class DetailViewController: UIViewController {
             let location = CLLocationCoordinate2D(latitude: lat, longitude: lng)
             
             // 한 점에서 부터 거리(m)를 반영하여 맵의 크기를 가진 객체 획득
-            let coordinateRegion = MKCoordinateRegion(center: location, latitudinalMeters: 400, longitudinalMeters: 300)
+            let coordinateRegion = MKCoordinateRegion(center: location, latitudinalMeters: 160, longitudinalMeters: 120)
             // 400m, 300m로 설정
             
             // @IBOutlet myMap: MKMapView! 에 전달
