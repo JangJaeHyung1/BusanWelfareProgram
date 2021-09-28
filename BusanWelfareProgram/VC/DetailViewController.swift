@@ -77,7 +77,7 @@ class DetailViewController: UIViewController {
         }else{
             targetLabel.text = item.target
         }
-        programDateLabel.text = "\(item.startDate) - \(item.finishDate)"
+        programDateLabel.text = "\(item.startDate) ~ \(item.finishDate)"
         programCostLabel.text = item.cost
         
         centerNmLabel.text = item.centerNm
