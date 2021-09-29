@@ -11,18 +11,19 @@ class InfoTableViewController: UIViewController{
     
     @IBOutlet weak var infoTableView: UITableView!
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var ifSearchEmpty: UILabel!
     
     
     private var biggestTopSafeAreaInset: CGFloat = 0
     private var arr: [Item] = []
-    
     private var gugunArr: [Item] = []
+    
     var gugun: String? {
         didSet{
-            self.navigationItem.title = gugun
-            self.gugunArr = []
+            navigationItem.title = gugun
+            gugunArr = []
+            
             if arr.count == 0{
-                //                print("first")
                 DispatchQueue.main.async {
                     self.indicatorView.startAnimating()
                     fetchAPI.shared.getData(numOfRows: 1035, PageNo: 1) {
@@ -34,22 +35,29 @@ class InfoTableViewController: UIViewController{
                                 self?.gugunArr.append((self?.arr[i])!)
                             }
                         }
+                        if self?.gugunArr.count == 0{
+                            self?.ifSearchEmpty.isHidden = false
+                        } else{
+                            self?.ifSearchEmpty.isHidden = true
+                        }
                         self?.infoTableView.reloadData()
                         self?.indicatorView.stopAnimating()
                         self?.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
                     }
                 }
             }else {
-                //                print("second")
-                //                self.indicatorView.startAnimating()
                 for i in 0 ... self.arr.count - 1 {
                     if (self.arr[i].gugun.contains(self.gugun!)){
-                        self.gugunArr.append(self.arr[i])
+                        gugunArr.append(self.arr[i])
                     }
                 }
-                self.infoTableView.reloadData()
-                //                self.indicatorView.stopAnimating()
-                self.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
+                if gugunArr.count == 0{
+                    ifSearchEmpty.isHidden = false
+                } else{
+                    ifSearchEmpty.isHidden = true
+                }
+                infoTableView.reloadData()
+                infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
             }
             
         }
@@ -59,6 +67,7 @@ class InfoTableViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ifSearchEmpty.isHidden = true
         indicatorSet()
         navigationUISetting()
     }

@@ -207,6 +207,12 @@
                                     <constraint firstAttribute="width" constant="200" id="qbV-7c-dHz"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 결과가 없습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3b-hX-K24">
+                                <rect key="frame" x="141" y="452.66666666666669" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SMI-2o-4B7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -217,6 +223,8 @@
                             <constraint firstItem="N77-Hx-Lbh" firstAttribute="centerX" secondItem="RKm-Zw-IDT" secondAttribute="centerX" id="H4M-kz-fwo"/>
                             <constraint firstItem="N77-Hx-Lbh" firstAttribute="centerY" secondItem="RKm-Zw-IDT" secondAttribute="centerY" id="Nuu-P4-OSz"/>
                             <constraint firstItem="SMI-2o-4B7" firstAttribute="bottom" secondItem="Mch-Vv-8Ro" secondAttribute="bottom" id="Ydf-Ai-fea"/>
+                            <constraint firstItem="B3b-hX-K24" firstAttribute="centerX" secondItem="RKm-Zw-IDT" secondAttribute="centerX" id="dLm-Ni-uV4"/>
+                            <constraint firstItem="B3b-hX-K24" firstAttribute="centerY" secondItem="RKm-Zw-IDT" secondAttribute="centerY" id="q08-SY-HL4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="always" id="Vxs-DG-94B">
@@ -225,6 +233,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ifSearchEmpty" destination="B3b-hX-K24" id="ieS-4Y-VRM"/>
                         <outlet property="indicatorView" destination="N77-Hx-Lbh" id="N1h-1Y-sRU"/>
                         <outlet property="infoTableView" destination="Mch-Vv-8Ro" id="srf-eq-07W"/>
                         <segue destination="KmB-pO-mfJ" kind="show" identifier="detailSegue" id="3lJ-4b-DHK"/>
@@ -609,6 +618,9 @@
         <image name="loading" width="341.33334350585938" height="341.33334350585938"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

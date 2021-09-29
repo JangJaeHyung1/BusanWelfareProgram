@@ -18,7 +18,7 @@ struct fetchAPI {
         
         let url = "http://apis.data.go.kr/6260000/SocialWelfareCenterProgramService/getProgramInfo?serviceKey=\(encodingKey)&numOfRows=\(numOfRows)&pageNo=\(PageNo)&resultType=json"
         
-
+        
         AF.request(url, method: .get).responseJSON { response in
             switch response.result {
             case .success(_):
