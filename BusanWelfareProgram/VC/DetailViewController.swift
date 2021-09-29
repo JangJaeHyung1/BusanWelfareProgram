@@ -81,7 +81,7 @@ class DetailViewController: UIViewController {
         programCostLabel.text = item.cost
         
         centerNmLabel.text = item.centerNm
-        centerNumberLabel.text = item.centerNm
+        centerNumberLabel.text = item.tel
         locationLabel.text = item.addrRoad
     }
     

@@ -10,25 +10,38 @@ import UIKit
 class InfoTableViewController: UIViewController{
     
     @IBOutlet weak var infoTableView: UITableView!
-    var biggestTopSafeAreaInset: CGFloat = 0
+    private var biggestTopSafeAreaInset: CGFloat = 0
+    private var arr: [Item] = []
     
-    var arr: [Item] = []
+    private var gugunArr: [Item] = []
     var gugun: String? {
         didSet{
             self.navigationItem.title = gugun
-            self.arr = []
+            self.gugunArr = []
             
-            
-            fetchAPI.shared.getData(numOfRows: 1000, PageNo: 1) { [weak self] jsonArr in
-                for i in 0 ... jsonArr.count-1 {
-                    if jsonArr[i].gugun.contains((self?.gugun)!){
-                        self?.arr.append(jsonArr[i])
+            if arr.count == 0{
+//                print("first")
+                fetchAPI.shared.getData(numOfRows: 1035, PageNo: 1) { [weak self] jsonArr in
+                    self?.arr = jsonArr
+                    for i in 0 ... (self?.arr.count)! - 1 {
+                        if (self?.arr[i].gugun.contains((self?.gugun)!))!{
+                            self?.gugunArr.append((self?.arr[i])!)
+                        }
+                    }
+                    self?.infoTableView.reloadData()
+                    self?.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
+                }
+            }else {
+//                print("second")
+                for i in 0 ... self.arr.count - 1 {
+                    if (self.arr[i].gugun.contains(self.gugun!)){
+                        self.gugunArr.append(self.arr[i])
                     }
                 }
-                
-                self?.infoTableView.reloadData()
-                self?.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
+                self.infoTableView.reloadData()
+                self.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
             }
+
         }
     }
     
@@ -64,7 +77,7 @@ class InfoTableViewController: UIViewController{
         if segue.identifier == "detailSegue"{
             let vc = segue.destination as? DetailViewController
             if let index = sender as? Int{
-                vc?.item = arr[index]
+                vc?.item = gugunArr[index]
             }
         }
     }
@@ -72,7 +85,7 @@ class InfoTableViewController: UIViewController{
     @objc func showDetailVC(sender: UIButton){
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController{
             
-            vc.item = arr[sender.tag]
+            vc.item = gugunArr[sender.tag]
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -111,7 +124,7 @@ extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr.count
+        return gugunArr.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -122,12 +135,12 @@ extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell: CustomInfoTableCell = tableView.dequeueReusableCell(withIdentifier: "customInfoTableCell", for: indexPath) as! CustomInfoTableCell
         
-        cell.programName.text = arr[indexPath.row].programNm
-        cell.programContent.text = arr[indexPath.row].programDetail
+        cell.programName.text = gugunArr[indexPath.row].programNm
+        cell.programContent.text = gugunArr[indexPath.row].programDetail
         
-        cell.centerName.text = arr[indexPath.row].centerNm
-        cell.targetLbl.text = "대상 : \(arr[indexPath.row].target)"
-        cell.cost.text = "비용 : \(arr[indexPath.row].cost)"
+        cell.centerName.text = gugunArr[indexPath.row].centerNm
+        cell.targetLbl.text = "대상 : \(gugunArr[indexPath.row].target)"
+        cell.cost.text = "비용 : \(gugunArr[indexPath.row].cost)"
         
         cell.selectionStyle = .none
         cell.backgroundColor = .init(rgb: 0xFAFAFA)
