@@ -7,8 +7,8 @@ target 'BusanWelfareProgram' do
 
   # Pods for BusanWelfareProgram
 
-pod 'Firebase/Analytics'
+# pod 'Firebase/Analytics'
 pod 'Alamofire'
-pod 'SwiftyJSON'
+# pod 'SwiftyJSON'
 
 end

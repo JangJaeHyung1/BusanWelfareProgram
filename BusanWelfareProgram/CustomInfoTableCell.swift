@@ -42,6 +42,8 @@ class CustomInfoTableCell: UITableViewCell {
         cellView.layer.masksToBounds = false
         cellView.layer.shadowOffset = CGSize(width: 2, height: 2)
         
+        cellView.layer.shadowPath = UIBezierPath(roundedRect: cellView.bounds, cornerRadius: cellView.layer.cornerRadius).cgPath
+        
         cellView.layer.shadowRadius = 3 
         cellView.layer.shadowOpacity = 0.2
     }

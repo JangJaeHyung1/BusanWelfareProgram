@@ -10,6 +10,9 @@ import UIKit
 class InfoTableViewController: UIViewController{
     
     @IBOutlet weak var infoTableView: UITableView!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
+    
+    
     private var biggestTopSafeAreaInset: CGFloat = 0
     private var arr: [Item] = []
     
@@ -18,30 +21,37 @@ class InfoTableViewController: UIViewController{
         didSet{
             self.navigationItem.title = gugun
             self.gugunArr = []
-            
             if arr.count == 0{
-//                print("first")
-                fetchAPI.shared.getData(numOfRows: 1035, PageNo: 1) { [weak self] jsonArr in
-                    self?.arr = jsonArr
-                    for i in 0 ... (self?.arr.count)! - 1 {
-                        if (self?.arr[i].gugun.contains((self?.gugun)!))!{
-                            self?.gugunArr.append((self?.arr[i])!)
+                //                print("first")
+                DispatchQueue.main.async {
+                    self.indicatorView.startAnimating()
+                    fetchAPI.shared.getData(numOfRows: 1035, PageNo: 1) {
+                        [weak self] jsonArr in
+                        self?.arr = jsonArr
+                        
+                        for i in 0 ... (self?.arr.count)! - 1 {
+                            if (self?.arr[i].gugun.contains((self?.gugun)!))!{
+                                self?.gugunArr.append((self?.arr[i])!)
+                            }
                         }
+                        self?.infoTableView.reloadData()
+                        self?.indicatorView.stopAnimating()
+                        self?.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
                     }
-                    self?.infoTableView.reloadData()
-                    self?.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
                 }
             }else {
-//                print("second")
+                //                print("second")
+                //                self.indicatorView.startAnimating()
                 for i in 0 ... self.arr.count - 1 {
                     if (self.arr[i].gugun.contains(self.gugun!)){
                         self.gugunArr.append(self.arr[i])
                     }
                 }
                 self.infoTableView.reloadData()
+                //                self.indicatorView.stopAnimating()
                 self.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
             }
-
+            
         }
     }
     
@@ -49,10 +59,15 @@ class InfoTableViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        indicatorSet()
         navigationUISetting()
     }
-
+    
+    func indicatorSet(){
+        self.view.bringSubviewToFront(self.indicatorView)
+        indicatorView.hidesWhenStopped = true
+    }
+    
     func navigationUISetting(){
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.leftBarButtonItem = nil;
@@ -60,7 +75,7 @@ class InfoTableViewController: UIViewController{
         self.navigationItem.rightBarButtonItem?.target = self
         self.navigationItem.rightBarButtonItem?.action = #selector(showSelectGugunVC)
     }
-
+    
     
     // MARK: - Navigation
     
@@ -100,7 +115,7 @@ class InfoTableViewController: UIViewController{
     }
     
     func scrollToTop(animated: Bool) {
-//        infoTableView.scro
+        //        infoTableView.scro
         infoTableView.setContentOffset(CGPoint(x: 0, y: -biggestTopSafeAreaInset), animated: animated)
     }
     
@@ -128,7 +143,7 @@ extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
+        //        performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

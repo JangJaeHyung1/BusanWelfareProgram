@@ -200,6 +200,13 @@
                                     <outlet property="delegate" destination="fT0-3A-kf1" id="rda-bC-lgc"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="N77-Hx-Lbh">
+                                <rect key="frame" x="114" y="435.66666666666669" width="200" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Zbn-aF-SSM"/>
+                                    <constraint firstAttribute="width" constant="200" id="qbV-7c-dHz"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SMI-2o-4B7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -207,6 +214,8 @@
                             <constraint firstItem="SMI-2o-4B7" firstAttribute="trailing" secondItem="Mch-Vv-8Ro" secondAttribute="trailing" id="1Om-xR-5qH"/>
                             <constraint firstItem="Mch-Vv-8Ro" firstAttribute="leading" secondItem="SMI-2o-4B7" secondAttribute="leading" id="6U9-00-KGq"/>
                             <constraint firstItem="Mch-Vv-8Ro" firstAttribute="top" secondItem="SMI-2o-4B7" secondAttribute="top" id="ES0-Ku-yo8"/>
+                            <constraint firstItem="N77-Hx-Lbh" firstAttribute="centerX" secondItem="RKm-Zw-IDT" secondAttribute="centerX" id="H4M-kz-fwo"/>
+                            <constraint firstItem="N77-Hx-Lbh" firstAttribute="centerY" secondItem="RKm-Zw-IDT" secondAttribute="centerY" id="Nuu-P4-OSz"/>
                             <constraint firstItem="SMI-2o-4B7" firstAttribute="bottom" secondItem="Mch-Vv-8Ro" secondAttribute="bottom" id="Ydf-Ai-fea"/>
                         </constraints>
                     </view>
@@ -216,6 +225,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="indicatorView" destination="N77-Hx-Lbh" id="N1h-1Y-sRU"/>
                         <outlet property="infoTableView" destination="Mch-Vv-8Ro" id="srf-eq-07W"/>
                         <segue destination="KmB-pO-mfJ" kind="show" identifier="detailSegue" id="3lJ-4b-DHK"/>
                     </connections>
