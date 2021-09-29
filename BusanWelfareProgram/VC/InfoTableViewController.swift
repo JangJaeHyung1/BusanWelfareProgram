@@ -58,6 +58,7 @@ class InfoTableViewController: UIViewController{
                 }
                 infoTableView.reloadData()
                 infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
+                navigationController?.navigationBar.sizeToFit()
             }
             
         }
