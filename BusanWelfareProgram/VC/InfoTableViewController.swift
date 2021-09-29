@@ -114,21 +114,6 @@ class InfoTableViewController: UIViewController{
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
-    
-    
-    // MARK: - scrollToTop and show Large Title
-    
-    override func viewSafeAreaInsetsDidChange() {
-        super.viewSafeAreaInsetsDidChange()
-        self.biggestTopSafeAreaInset = max(infoTableView.safeAreaInsets.top, biggestTopSafeAreaInset)
-    }
-    
-    func scrollToTop(animated: Bool) {
-        //        infoTableView.scro
-        infoTableView.setContentOffset(CGPoint(x: 0, y: -biggestTopSafeAreaInset), animated: animated)
-    }
-    
 }
 
 // MARK: - sendDataDelegate 구현
