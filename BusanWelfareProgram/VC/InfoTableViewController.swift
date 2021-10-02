@@ -26,25 +26,29 @@ class InfoTableViewController: UIViewController{
             if arr.count == 0{
                 DispatchQueue.main.async {
                     self.indicatorView.startAnimating()
-                    fetchAPI.shared.getData(numOfRows: 1035, PageNo: 1) {
-                        [weak self] jsonArr in
-                        self?.arr = jsonArr
-                        
-                        for i in 0 ... (self?.arr.count)! - 1 {
-                            if (self?.arr[i].gugun.contains((self?.gugun)!))!{
-                                self?.gugunArr.append((self?.arr[i])!)
+                    DispatchQueue.global().async {
+                        fetchAPI.shared.getData(numOfRows: 1035, PageNo: 1) {
+                            [weak self] jsonArr in
+                            self?.arr = jsonArr
+                            for i in 0 ... (self?.arr.count)! - 1 {
+                                if (self?.arr[i].gugun.contains((self?.gugun)!))!{
+                                    self?.gugunArr.append((self?.arr[i])!)
+                                }
+                            }
+                            DispatchQueue.main.async {
+                                if self?.gugunArr.count == 0{
+                                    self?.ifSearchEmpty.isHidden = false
+                                } else{
+                                    self?.ifSearchEmpty.isHidden = true
+                                }
+                                self?.infoTableView.reloadData()
+                                self?.indicatorView.stopAnimating()
+                                self?.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
                             }
                         }
-                        if self?.gugunArr.count == 0{
-                            self?.ifSearchEmpty.isHidden = false
-                        } else{
-                            self?.ifSearchEmpty.isHidden = true
-                        }
-                        self?.infoTableView.reloadData()
-                        self?.indicatorView.stopAnimating()
-                        self?.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
                     }
                 }
+                
             }else {
                 for i in 0 ... self.arr.count - 1 {
                     if (self.arr[i].gugun.contains(self.gugun!)){
@@ -68,6 +72,10 @@ class InfoTableViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .automatic
+        
         ifSearchEmpty.isHidden = true
         indicatorSet()
         navigationUISetting()
