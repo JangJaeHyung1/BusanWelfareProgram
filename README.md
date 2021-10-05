@@ -12,7 +12,6 @@ UI/UX design : https://www.figma.com/proto/muCIJZBSmkrVQTy3wri48k/부산-사회�
 
 시현 영상 - https://youtu.be/AUv3TZYVvEE
 
----
 
 시현 이미지
 
