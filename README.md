@@ -9,8 +9,11 @@ UI/UX design : https://www.figma.com/proto/muCIJZBSmkrVQTy3wri48k/부산-사회�
 - 모델패턴: MVC 패턴
 
 ---
+
 시현 영상 - https://youtu.be/AUv3TZYVvEE
+
 ---
+
 시현 이미지
 
 1. 로딩
