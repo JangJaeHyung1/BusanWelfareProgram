@@ -21,6 +21,7 @@ class InfoTableViewController: UIViewController{
     var gugun: String? {
         didSet{
             navigationItem.title = gugun
+            fetchData()
         }
     }
     
@@ -37,16 +38,15 @@ class InfoTableViewController: UIViewController{
         navigationUISetting()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        fetchData()
-    }
+    //    override func viewDidAppear(_ animated: Bool) {
+    //        fetchData()
+    //    }
     
     func fetchData(){
         gugunArr = []
         
         if arr.count == 0{
             DispatchQueue.main.async {
-//                    print(self)
                 self.indicatorView?.startAnimating()
                 DispatchQueue.global().async {
                     fetchAPI.shared.getData(numOfRows: 1035, PageNo: 1) {
@@ -70,7 +70,6 @@ class InfoTableViewController: UIViewController{
                     }
                 }
             }
-            
         }else {
             for i in 0 ... self.arr.count - 1 {
                 if (self.arr[i].gugun.contains(self.gugun!)){
@@ -152,9 +151,9 @@ extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
         return gugunArr.count
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
-    }
+    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
+    //    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
