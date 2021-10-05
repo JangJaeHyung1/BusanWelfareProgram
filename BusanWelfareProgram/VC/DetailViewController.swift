@@ -42,25 +42,11 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "상세보기"
-        NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         detailVCLabelUpdate()
         mapkitUIUpdate()
-    }
-    
-    // 앱 background시 호출
-    @objc func didEnterBackground() {
-        print("didEnterBackgroud")
-        
-        let AfterCallingVC = self.storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
-        self.modalPresentationStyle = .fullScreen
-        self.present(AfterCallingVC, animated: true, completion: nil)
     }
     
     // MARK: - UIfetch
