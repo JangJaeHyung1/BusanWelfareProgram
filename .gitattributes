@@ -1,0 +1,2 @@
+. filter=lfs diff=lfs merge=lfs -text
+/Pods/NMapsMap filter=lfs diff=lfs merge=lfs -text
