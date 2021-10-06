@@ -10,5 +10,6 @@ target 'BusanWelfareProgram' do
 # pod 'Firebase/Analytics'
 pod 'Alamofire'
 # pod 'SwiftyJSON'
+pod 'NMapsMap'
 
 end

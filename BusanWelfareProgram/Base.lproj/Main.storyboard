@@ -468,21 +468,23 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Zy-e8-8cK">
-                                                <rect key="frame" x="40" y="528.33333333333337" width="348" height="261"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="5Zy-e8-8cK" secondAttribute="height" multiplier="4:3" id="2vd-oO-oxA"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="delegate" destination="KmB-pO-mfJ" id="wm8-Oz-94b"/>
-                                                </connections>
-                                            </mapView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gl-x5-6wd">
                                                 <rect key="frame" x="87.666666666666671" y="351.66666666666669" width="29.666666666666671" height="23.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZY-F9-fZl" customClass="NMFMapView">
+                                                <rect key="frame" x="40" y="528.33333333333337" width="348" height="261"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="nZY-F9-fZl" secondAttribute="height" multiplier="4:3" id="43V-L8-RMc"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="delegate" destination="KmB-pO-mfJ" id="jWe-8f-dXk"/>
+                                                    <outlet property="touchDelegate" destination="KmB-pO-mfJ" id="qg5-TT-rCv"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -491,10 +493,10 @@
                                             <constraint firstItem="wkY-dB-kPa" firstAttribute="leading" secondItem="NwD-5i-faM" secondAttribute="trailing" constant="8" id="4RS-rx-3Bp"/>
                                             <constraint firstItem="sbz-6O-nhk" firstAttribute="leading" secondItem="TbF-73-fqm" secondAttribute="trailing" constant="8" id="68j-Z6-th5"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="g5w-vt-geY" secondAttribute="trailing" constant="50" id="6NL-uM-SeW"/>
-                                            <constraint firstItem="5Zy-e8-8cK" firstAttribute="top" secondItem="v9z-6e-WF0" secondAttribute="bottom" constant="20" id="8Pq-fx-HRu"/>
                                             <constraint firstItem="Dtt-fy-et1" firstAttribute="leading" secondItem="fhd-yQ-hB7" secondAttribute="leading" constant="-5" id="8RG-iN-dNc"/>
                                             <constraint firstItem="fhd-yQ-hB7" firstAttribute="top" secondItem="LX3-6j-VQC" secondAttribute="top" constant="20" id="9lB-41-aMv"/>
                                             <constraint firstItem="sbz-6O-nhk" firstAttribute="top" secondItem="DgO-KO-xQQ" secondAttribute="bottom" constant="50" id="Ai2-GE-tXT"/>
+                                            <constraint firstAttribute="bottom" secondItem="nZY-F9-fZl" secondAttribute="bottom" constant="30" id="B2k-5R-K5H"/>
                                             <constraint firstItem="v9z-6e-WF0" firstAttribute="top" secondItem="g5w-vt-geY" secondAttribute="bottom" constant="50.000000000000057" id="D2G-nZ-z1A"/>
                                             <constraint firstItem="ASv-4W-FuP" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="ENs-sb-OA3"/>
                                             <constraint firstItem="k6u-Rn-I8H" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="H4U-4Z-8ja"/>
@@ -506,8 +508,8 @@
                                             <constraint firstItem="O4d-SK-n9P" firstAttribute="top" secondItem="xLZ-sn-3Ra" secondAttribute="bottom" constant="30" id="Pe1-I0-vgf"/>
                                             <constraint firstItem="O4d-SK-n9P" firstAttribute="leading" secondItem="k6u-Rn-I8H" secondAttribute="trailing" constant="8" id="RIi-Zc-KQg"/>
                                             <constraint firstItem="DgO-KO-xQQ" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="S9J-vB-fl2"/>
+                                            <constraint firstItem="nZY-F9-fZl" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="40" id="Sgk-Zk-4T5"/>
                                             <constraint firstItem="tHa-hE-rhg" firstAttribute="top" secondItem="O4d-SK-n9P" secondAttribute="bottom" constant="10" id="Swe-oo-Scv"/>
-                                            <constraint firstAttribute="trailing" secondItem="5Zy-e8-8cK" secondAttribute="trailing" constant="40" id="WXt-Qs-fiW"/>
                                             <constraint firstItem="rdW-42-Hrd" firstAttribute="top" secondItem="wkY-dB-kPa" secondAttribute="bottom" constant="10" id="Wqd-Lr-Tc0"/>
                                             <constraint firstItem="xLZ-sn-3Ra" firstAttribute="top" secondItem="zlO-S3-bBL" secondAttribute="bottom" constant="30" id="X3o-PE-PL3"/>
                                             <constraint firstItem="zlO-S3-bBL" firstAttribute="leading" secondItem="rdW-42-Hrd" secondAttribute="trailing" constant="8" id="XiO-Ev-v8d"/>
@@ -515,7 +517,6 @@
                                             <constraint firstItem="fhd-yQ-hB7" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="ZUg-c9-G5e"/>
                                             <constraint firstItem="rdW-42-Hrd" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="cQB-9A-2S2"/>
                                             <constraint firstItem="g5w-vt-geY" firstAttribute="leading" secondItem="ASv-4W-FuP" secondAttribute="trailing" constant="8" id="do5-fU-G2B"/>
-                                            <constraint firstItem="5Zy-e8-8cK" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="40" id="fHT-qd-c9K"/>
                                             <constraint firstItem="8Gl-x5-6wd" firstAttribute="leading" secondItem="tHa-hE-rhg" secondAttribute="trailing" constant="8" id="gMZ-IH-IEj"/>
                                             <constraint firstItem="8Gl-x5-6wd" firstAttribute="top" secondItem="O4d-SK-n9P" secondAttribute="bottom" constant="10" id="hBH-gd-gAK"/>
                                             <constraint firstItem="xLZ-sn-3Ra" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="45" id="hpc-EY-SWj"/>
@@ -523,16 +524,17 @@
                                             <constraint firstItem="g5w-vt-geY" firstAttribute="top" secondItem="8Gl-x5-6wd" secondAttribute="bottom" constant="10" id="iDA-NV-Ccr"/>
                                             <constraint firstItem="v9z-6e-WF0" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="40" id="itb-LA-cec"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Gl-x5-6wd" secondAttribute="trailing" constant="50" id="jXa-H6-Ush"/>
-                                            <constraint firstAttribute="bottom" secondItem="5Zy-e8-8cK" secondAttribute="bottom" constant="30" id="lEj-t0-O4y"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zlO-S3-bBL" secondAttribute="trailing" constant="50" id="m69-a3-mDW"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sbz-6O-nhk" secondAttribute="trailing" constant="50" id="mjf-Jt-ezd"/>
                                             <constraint firstAttribute="trailing" secondItem="v9z-6e-WF0" secondAttribute="trailing" constant="40" id="mkt-hA-D1O"/>
                                             <constraint firstItem="TbF-73-fqm" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="rmh-Af-4ES"/>
                                             <constraint firstItem="NwD-5i-faM" firstAttribute="leading" secondItem="LX3-6j-VQC" secondAttribute="leading" constant="50" id="sCS-Nu-s5c"/>
+                                            <constraint firstItem="nZY-F9-fZl" firstAttribute="top" secondItem="v9z-6e-WF0" secondAttribute="bottom" constant="20" id="sZC-te-yxj"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wkY-dB-kPa" secondAttribute="trailing" constant="50" id="tJv-Pg-FxZ"/>
                                             <constraint firstItem="Dtt-fy-et1" firstAttribute="firstBaseline" secondItem="fhd-yQ-hB7" secondAttribute="firstBaseline" constant="-1" id="x0L-XR-qqw"/>
                                             <constraint firstItem="NwD-5i-faM" firstAttribute="top" secondItem="sbz-6O-nhk" secondAttribute="bottom" constant="10" id="xxF-lQ-R9e"/>
                                             <constraint firstItem="DgO-KO-xQQ" firstAttribute="top" secondItem="fhd-yQ-hB7" secondAttribute="bottom" constant="15" id="yEl-gI-cbU"/>
+                                            <constraint firstAttribute="trailing" secondItem="nZY-F9-fZl" secondAttribute="trailing" constant="40" id="z6q-9D-M3O"/>
                                             <constraint firstItem="zlO-S3-bBL" firstAttribute="top" secondItem="wkY-dB-kPa" secondAttribute="bottom" constant="10" id="zSI-ye-j05"/>
                                         </constraints>
                                     </view>
@@ -561,7 +563,7 @@
                         <outlet property="centerNmLabel" destination="O4d-SK-n9P" id="CFk-db-xQM"/>
                         <outlet property="centerNumberLabel" destination="8Gl-x5-6wd" id="XAI-r2-nAt"/>
                         <outlet property="locationLabel" destination="g5w-vt-geY" id="kwg-ii-kV2"/>
-                        <outlet property="mapkit" destination="5Zy-e8-8cK" id="LDZ-SP-XfH"/>
+                        <outlet property="naverMapView" destination="nZY-F9-fZl" id="ZMJ-70-cSB"/>
                         <outlet property="programCostLabel" destination="zlO-S3-bBL" id="ls8-AI-go3"/>
                         <outlet property="programDateLabel" destination="wkY-dB-kPa" id="1Su-Bk-emD"/>
                         <outlet property="programDetailLabel" destination="DgO-KO-xQQ" id="I8j-8b-iwc"/>

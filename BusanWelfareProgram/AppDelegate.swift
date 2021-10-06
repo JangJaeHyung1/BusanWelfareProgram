@@ -8,6 +8,7 @@
 import UIKit
 //import Firebase
 import CoreData
+//import NMapsMap
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+//        NMFAuthManager.shared().clientId = "YOUR_CLIENT_ID_HERE"
 //        FirebaseApp.configure()
         Thread.sleep(forTimeInterval: 0.6)
         return true
