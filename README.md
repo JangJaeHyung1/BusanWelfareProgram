@@ -1,12 +1,13 @@
 # BusanWelfareProgram
 ## 부산의 사회복지 프로그램에 대한 정보를 제공하는 어플입니다.
 
-워크플로우: pdf 첨부
+### 기획
+1. 워크플로우: pdf 첨부
+2. UI/UX design : https://www.figma.com/proto/muCIJZBSmkrVQTy3wri48k/부산-사회복지-프로그램-어플?node-id=5%3A6&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A6
 
-UI/UX design : https://www.figma.com/proto/muCIJZBSmkrVQTy3wri48k/부산-사회복지-프로그램-어플?node-id=5%3A6&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A6
-
-- 필요기능: fetch 공공api data, 지역구 선택 pickerView UI custom, 선택된 지역구 UserDefaults에 저장, 지도 표시, tableView cell UI custom
-- 모델패턴: MVC 패턴
+### 구현
+1. 필요기능: fetch 공공api data, 지역구 선택 pickerView UI custom, 선택된 지역구 UserDefaults에 저장, 지도 표시, tableView cell UI custom
+2. 모델패턴: MVC 패턴
 
 ---
 
@@ -30,3 +31,12 @@ appstore : https://apps.apple.com/kr/app/%EB%B6%80%EC%82%B0-%EC%82%AC%ED%9A%8C%E
 
 4. detailVC
 <img width="481" alt="4" src="https://user-images.githubusercontent.com/37135479/135082944-50020e8d-f7a5-4916-a3e2-f22f271c25c2.png">
+
+### 문제해결 아카이브
+
+
+tableVC에서 지역구의 값이 didSet될 때 requestAPI가 호출되도록 옵저빙 해두었습니다. (지역구를 선택할때마다 tableView의 값을 매번 바꿔야 하므로..)
+
+
+
+
