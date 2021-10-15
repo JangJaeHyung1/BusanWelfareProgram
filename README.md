@@ -49,7 +49,7 @@ var gugun: String? {
     }
 ```   
 지역선택VC에서 지역을 선택한 뒤 detailVC에 performSegue로 넘겨주었는데, 그 지역구의 값이 didSet될 때마다 data를 fetch하도록 옵저빙 해두었습니다.   
-(지역구를 선택할 때 마다 tableVC의 값이 달라져야 하므로)   
+(지역구를 선택할 때 마다 TableVC의 값이 달라져야 하므로)   
    
    
    
