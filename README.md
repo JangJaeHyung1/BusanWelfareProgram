@@ -20,7 +20,7 @@
  - 시현 이미지
 
 1. 로딩
-<img width="481" alt="1" src="https://user-images.githubusercontent.com/37135479/135082644-87d49e78-dc8d-4c5a-b897-0ad377c016e5.png">
+<img width="481" alt="loading" src="https://user-images.githubusercontent.com/37135479/137547407-ac005692-0b65-4fb1-8f9f-4813315627e6.png">
 
 2. 지역선택
 <img width="481" alt="2" src="https://user-images.githubusercontent.com/37135479/135082766-858dda15-fc5e-4a9a-894e-a897cc67192a.png">
