@@ -19,8 +19,8 @@ class InfoTableViewController: UIViewController{
     private var gugunArr: [Item] = []
     
     var gugun: String? {
-        didSet{
-            navigationItem.title = gugun
+        willSet{
+            navigationItem.title = newValue
             fetchData()
         }
     }
@@ -38,9 +38,6 @@ class InfoTableViewController: UIViewController{
         navigationUISetting()
     }
     
-    //    override func viewDidAppear(_ animated: Bool) {
-    //        fetchData()
-    //    }
     
     func fetchData(){
         gugunArr = []
@@ -104,7 +101,6 @@ class InfoTableViewController: UIViewController{
     // MARK: - Navigation
     
     @objc func showSelectGugunVC(){
-        //        UserDefaults.standard.setValue(nil, forKey: "gugun")
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectGugunViewController") as? SelectGugunViewController{
             vc.modalPresentationStyle = .fullScreen
             vc.delegate = self
@@ -151,10 +147,7 @@ extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
         return gugunArr.count
     }
     
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
-    //    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: CustomInfoTableCell = tableView.dequeueReusableCell(withIdentifier: "customInfoTableCell", for: indexPath) as! CustomInfoTableCell
