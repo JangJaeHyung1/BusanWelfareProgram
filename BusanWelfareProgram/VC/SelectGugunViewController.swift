@@ -20,11 +20,8 @@ class SelectGugunViewController: UIViewController {
     
     @IBAction func saveButtom(_ sender: UIButton) {
         if savedGugun == nil{
-//            print("push")
             performSegue(withIdentifier: "showInfoTableVC", sender: savedGugun)
         }else{
-//            print("dismiss")
-//            print(selectGugun)
             UserDefaults.standard.set(selectGugun, forKey: "gugun")
             delegate?.sendData(data: selectGugun)
             dismiss(animated: true, completion: nil)
@@ -48,14 +45,12 @@ class SelectGugunViewController: UIViewController {
         if savedGugun == nil {
             if segue.identifier == "showInfoTableVC" {
                 if let vc = segue.destination as? InfoTableViewController {
-//                    print("showInfoTableVC")
-                    vc.gugun = selectGugun
+//                    vc.gugun = selectGugun
                     UserDefaults.standard.set(selectGugun, forKey: "gugun")
                     vc.modalPresentationStyle = .fullScreen
                 }
             }
         }
-        
     }
     
     // MARK: - pickerViewUISetting
@@ -104,9 +99,7 @@ extension SelectGugunViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         return gugunList.count
     }
     
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        print("select=\(row), \(gugunList[row])")
         selectGugun = gugunList[row]
     }
     

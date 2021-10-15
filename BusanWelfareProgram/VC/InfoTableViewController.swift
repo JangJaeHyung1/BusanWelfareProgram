@@ -19,16 +19,16 @@ class InfoTableViewController: UIViewController{
     private var gugunArr: [Item] = []
     
     var gugun: String? {
-        willSet{
-            navigationItem.title = newValue
+        didSet{
+            navigationItem.title = gugun
+            self.indicatorView?.startAnimating()
             fetchData()
         }
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        gugun = UserDefaults.standard.string(forKey: "gugun")
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .automatic
@@ -43,46 +43,39 @@ class InfoTableViewController: UIViewController{
         gugunArr = []
         
         if arr.count == 0{
-            DispatchQueue.main.async {
-                self.indicatorView?.startAnimating()
-                DispatchQueue.global().async {
-                    fetchAPI.shared.getData(numOfRows: 1035, PageNo: 1) {
-                        [weak self] jsonArr in
-                        self?.arr = jsonArr
-                        for i in 0 ... (self?.arr.count)! - 1 {
-                            if (self?.arr[i].gugun.contains((self?.gugun)!))!{
-                                self?.gugunArr.append((self?.arr[i])!)
-                            }
-                        }
-                        DispatchQueue.main.async {
-                            if self?.gugunArr.count == 0{
-                                self?.ifSearchEmpty.isHidden = false
-                            } else{
-                                self?.ifSearchEmpty.isHidden = true
-                            }
-                            self?.infoTableView.reloadData()
-                            self?.indicatorView.stopAnimating()
-                            self?.infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
-                        }
-                    }
-                }
+            fetchAPI.shared.getData(numOfRows: 1035, PageNo: 1) {
+                [weak self] jsonArr in
+                self?.arr = jsonArr
+                self?.filteringGugunData()
+                self?.reloadAndScrollToTop(self?.gugunArr.count == 0)
+                self?.indicatorView?.stopAnimating()
             }
         }else {
-            for i in 0 ... self.arr.count - 1 {
-                if (self.arr[i].gugun.contains(self.gugun!)){
-                    gugunArr.append(self.arr[i])
-                }
-            }
-            if gugunArr.count == 0{
-                ifSearchEmpty.isHidden = false
-            } else{
-                ifSearchEmpty.isHidden = true
-            }
-            infoTableView.reloadData()
-            infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
+            filteringGugunData()
+            reloadAndScrollToTop(gugunArr.count == 0)
             navigationController?.navigationBar.sizeToFit()
+            indicatorView?.stopAnimating()
         }
     }
+    
+    func filteringGugunData() {
+        for i in 0 ... arr.count - 1 {
+            if arr[i].gugun.contains(gugun!){
+                gugunArr.append(arr[i])
+            }
+        }
+    }
+    
+    func reloadAndScrollToTop(_ isEmpty:Bool){
+        if isEmpty{
+            ifSearchEmpty.isHidden = false
+        } else{
+            ifSearchEmpty.isHidden = true
+        }
+        infoTableView.reloadData()
+        infoTableView.scrollToRow(at: IndexPath(row: NSNotFound, section: 0), at: .top, animated: false)
+    }
+    
     func indicatorSet(){
         self.view.bringSubviewToFront(self.indicatorView)
         indicatorView.hidesWhenStopped = true
@@ -95,7 +88,6 @@ class InfoTableViewController: UIViewController{
         self.navigationItem.rightBarButtonItem?.target = self
         self.navigationItem.rightBarButtonItem?.action = #selector(showSelectGugunVC)
     }
-    
     
     
     // MARK: - Navigation
@@ -127,6 +119,7 @@ class InfoTableViewController: UIViewController{
 }
 
 // MARK: - sendDataDelegate 구현
+
 extension InfoTableViewController: SendDataDelegate {
     func sendData(data gugun: String) {
         self.gugun = gugun
@@ -147,7 +140,7 @@ extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
         return gugunArr.count
     }
     
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: CustomInfoTableCell = tableView.dequeueReusableCell(withIdentifier: "customInfoTableCell", for: indexPath) as! CustomInfoTableCell

@@ -77,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mch-Vv-8Ro">
-                                <rect key="frame" x="0.0" y="88" width="428" height="804"/>
+                                <rect key="frame" x="0.0" y="140" width="428" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customInfoTableCell" rowHeight="213" id="j32-Ql-urA" customClass="CustomInfoTableCell" customModule="BusanWelfareProgram" customModuleProvider="target">
@@ -123,8 +123,8 @@
                                                                 <constraint firstAttribute="height" constant="1" id="Fhd-71-tQg"/>
                                                             </constraints>
                                                         </view>
-                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuA-rd-G6e">
-                                                            <rect key="frame" x="248" y="157" width="140" height="40"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuA-rd-G6e">
+                                                            <rect key="frame" x="240" y="140" width="140" height="40"/>
                                                             <color key="backgroundColor" red="0.0" green="0.38021355870000001" blue="0.70415294169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="AQS-3y-Yer"/>
@@ -453,7 +453,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="callBtn:" destination="KmB-pO-mfJ" eventType="touchUpInside" id="cxt-lI-OD4"/>
-                                                    <action selector="saveButtom:" destination="tUZ-Ds-WYp" eventType="touchUpInside" id="Zeb-qy-qx8"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASv-4W-FuP">
@@ -614,7 +613,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rb8-Ca-sDQ"/>
+        <segue reference="c5y-cQ-6n7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="loading" width="341.33334350585938" height="341.33334350585938"/>
