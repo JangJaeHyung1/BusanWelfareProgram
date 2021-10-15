@@ -69,9 +69,9 @@ var gugun: String? {
         }
     }
 ```
-nextVC에서 didSet이 호출되면서 fetch하기전에 indicator를 동작시킵니다.   
-하지만 nextVC가 view가 DidLoad 되기 전에 didSet이 호출되어 indicatorView가 nil 값인 경우가 있었습니다. (빠르게 선택할 경우)   
-그래서 indicator가 동작하지 않았고 이를 해결해주기위해   
+nextVC에서 didSet이 호출되면서 fetch하기전에 indicator를 동작시키는데,   
+nextVC의 view가 DidLoad 되기 전에 didSet이 호출되어 indicatorView가 nil 값인 경우가 있었습니다. (빠르게 선택할 경우)   
+그래서 indicator가 동작하지 않았고 이를 해결해주기위해서 view가 didLoad된 뒤 didSet이 호출 되도록,   
 nextVC인 TableVC의 viewDidLoad안에서 UserDefaults로 지역구 값을 불러오면서 didSet을 호출하여 오류를 회피하였습니다.   
 (vc.gugun = selectGugun는 제거)
    
