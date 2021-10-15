@@ -35,7 +35,9 @@
 ### 5. 문제해결 아카이브
 
 detailVC에서 requestAPI시 동작하는 indicator가 가끔씩 보이지 않는 오류가 있었습니다.   
-지역선택VC에서 지역을 선택한 뒤 detailVC에 performSegue로 넘겨주었는데, 그 지역구의 값이 didSet될 때마다 data를 fetch하도록 옵저빙 해두었습니다. (지역구를 선택할 때 마다 tableVC의 값이 달라져야 하므로)
+   
+지역선택VC에서 지역을 선택한 뒤 detailVC에 performSegue로 넘겨주었는데, 그 지역구의 값이 didSet될 때마다 data를 fetch하도록 옵저빙 해두었습니다.   
+(지역구를 선택할 때 마다 tableVC의 값이 달라져야 하므로)   
 
 
 
