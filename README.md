@@ -29,12 +29,16 @@
 <img width="481" alt="3" src="https://user-images.githubusercontent.com/37135479/135082862-c97ee26d-aa5f-4cdc-97dd-f2ca47f462d6.png">
 
 4. detailVC
-<img width="481" alt="4" src="https://user-images.githubusercontent.com/37135479/135082944-50020e8d-f7a5-4916-a3e2-f22f271c25c2.png">
+<img width="481" alt="4" src="https://user-images.githubusercontent.com/37135479/135082944-50020e8d-f7a5-4916-a3e2-f22f271c25c2.png">   
 
-### 문제해결 아카이브
+   
+### 5. 문제해결 아카이브
+
+detailVC에서 requestAPI시 동작하는 indicator가 가끔씩 보이지 않는 오류가 있었습니다.   
+지역선택VC에서 지역을 선택한 뒤 detailVC에 performSegue로 넘겨주었는데, 그 지역구의 값이 didSet될 때마다 data를 fetch하도록 옵저빙 해두었습니다. (지역구를 선택할 때 마다 tableVC의 값이 달라져야 하므로)
 
 
-tableVC에서 지역구의 값이 didSet될 때 requestAPI가 호출되도록 옵저빙 해두었습니다. (지역구를 선택할때마다 tableView의 값을 매번 바꿔야 하므로..)
+
 
 
 
