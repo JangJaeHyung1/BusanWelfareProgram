@@ -34,7 +34,7 @@
    
 ### 5. 문제해결 아카이브
 
-#### detailVC에서 requestAPI시 동작하는 indicator가 가끔씩 보이지 않는 오류가 있었습니다.   
+#### TableVC에서 requestAPI시 동작하는 indicator가 가끔씩 보이지 않는 오류가 있었습니다.   
    
 ```swift
 // TableViewController
