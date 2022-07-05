@@ -23,8 +23,9 @@
 <img width="481" alt="loading" src="https://user-images.githubusercontent.com/37135479/137547407-ac005692-0b65-4fb1-8f9f-4813315627e6.png">
 
 2. 지역선택
-<img width="481" alt="2" src="https://user-images.githubusercontent.com/37135479/135082766-858dda15-fc5e-4a9a-894e-a897cc67192a.png">
 Custom Picker UI 정리 - https://ggasoon2.tistory.com/14
+<img width="481" alt="2" src="https://user-images.githubusercontent.com/37135479/135082766-858dda15-fc5e-4a9a-894e-a897cc67192a.png">
+
 
 
 
