@@ -24,6 +24,7 @@
 
 2. 지역선택
 <img width="481" alt="2" src="https://user-images.githubusercontent.com/37135479/135082766-858dda15-fc5e-4a9a-894e-a897cc67192a.png">
+Custom Picker UI 정리 - https://ggasoon2.tistory.com/14
 
 3. tableVC
 <img width="481" alt="3" src="https://user-images.githubusercontent.com/37135479/135082862-c97ee26d-aa5f-4cdc-97dd-f2ca47f462d6.png">
