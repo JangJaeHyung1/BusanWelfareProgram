@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class InfoTableViewController: UIViewController{
     
@@ -43,7 +45,7 @@ class InfoTableViewController: UIViewController{
         gugunArr = []
         
         if arr.count == 0{
-            fetchAPI.shared.getData(numOfRows: 1035, PageNo: 1) {
+            fetchAPI.shared.getData(numOfRows: 2000, PageNo: 1) {
                 [weak self] jsonArr in
                 self?.arr = jsonArr
                 self?.filteringGugunData()
@@ -109,10 +111,10 @@ class InfoTableViewController: UIViewController{
         }
     }
     
-    @objc func showDetailVC(sender: UIButton){
+    func showDetailVC(item: Item){
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController{
             
-            vc.item = gugunArr[sender.tag]
+            vc.item = item
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -144,21 +146,15 @@ extension InfoTableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: CustomInfoTableCell = tableView.dequeueReusableCell(withIdentifier: "customInfoTableCell", for: indexPath) as! CustomInfoTableCell
+        let item = gugunArr[indexPath.row]
+        cell.configure(item: item)
+        cell.showDetailBtn.rx.tap
+            .subscribe(onNext:{ [weak self] res in
+                guard let self else { return }
+                self.showDetailVC(item: item)
+            })
+            .disposed(by: cell.disposeBag)
         
-        cell.programName.text = gugunArr[indexPath.row].programNm
-        cell.programContent.text = gugunArr[indexPath.row].programDetail
-        
-        cell.centerName.text = gugunArr[indexPath.row].centerNm
-        cell.targetLbl.text = "대상 : \(gugunArr[indexPath.row].target)"
-        cell.cost.text = "비용 : \(gugunArr[indexPath.row].cost)"
-        
-        cell.selectionStyle = .none
-        cell.backgroundColor = .init(rgb: 0xFAFAFA)
-        
-        cell.showDetailBtn.tag = indexPath.row
-        cell.showDetailBtn.addTarget(self,
-                                     action: #selector(showDetailVC(sender:)),
-                                     for: .touchUpInside)
         
         return cell
     }

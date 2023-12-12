@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import NMapsMap
+import MapKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, MKMapViewDelegate {
     
     var item: Item?
     
@@ -38,8 +38,7 @@ class DetailViewController: UIViewController {
             UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         }
     }
-    
-    @IBOutlet weak var naverMapView: NMFMapView!
+    @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +47,7 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         detailVCLabelUpdate()
-        naverMap()
+        appleMap()
     }
     
     // MARK: - UIfetch
@@ -74,25 +73,30 @@ class DetailViewController: UIViewController {
     }
     
     // MARK: - map
+
     
-    func naverMap(){
+    func appleMap() {
         guard let item = item else { return }
         let lat = (item.lat as NSString).doubleValue
         let lng = (item.lng as NSString).doubleValue
-        if (lat < 370) && (lng < 370){
-            let coord = NMGLatLng(lat: lat, lng: lng)
-            
-            let cameraUpdate = NMFCameraUpdate(scrollTo: coord, zoomTo: 13)
-            naverMapView.moveCamera(cameraUpdate)
-
-            
-            let marker = NMFMarker()
-            
-            marker.iconImage = NMF_MARKER_IMAGE_BLACK
-            marker.iconTintColor = UIColor.systemYellow
-            
-            marker.position = NMGLatLng(lat: lat, lng: lng)
-            marker.mapView = naverMapView
-        }
+        // Set initial location (Apple's headquarters)
+        let initialLocation = CLLocation(latitude: lat, longitude: lng)
+        
+        // Create a region around the location
+        let regionRadius: CLLocationDistance = 1000
+        let coordinateRegion = MKCoordinateRegion(center: initialLocation.coordinate,
+                                                  latitudinalMeters: regionRadius,
+                                                  longitudinalMeters: regionRadius)
+        
+        // Set the map view's region to the defined region
+        mapView.setRegion(coordinateRegion, animated: true)
+        
+        // Add an annotation (pin) at the location
+        let annotation = MKPointAnnotation()
+        
+        annotation.coordinate = initialLocation.coordinate
+        annotation.title = item.centerNm
+        annotation.subtitle = item.programNm
+        mapView.addAnnotation(annotation)
     }
 }

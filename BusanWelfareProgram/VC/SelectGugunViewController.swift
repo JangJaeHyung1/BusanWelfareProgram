@@ -62,6 +62,7 @@ class SelectGugunViewController: UIViewController {
     func selectedPickerViewUICustom() {
         gugunPickerView.subviews[1].backgroundColor = .clear
         
+        // x좌표 센터로 수정
         let upLine = UIView(frame: CGRect(x: 15, y: 0, width: 150, height: 0.8))
         let underLine = UIView(frame: CGRect(x: 15, y: 60, width: 150, height: 0.8))
         

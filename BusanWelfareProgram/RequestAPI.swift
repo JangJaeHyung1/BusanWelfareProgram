@@ -16,8 +16,7 @@ struct fetchAPI {
         
         guard let encodingKey = Bundle.main.object(forInfoDictionaryKey: "API_KEY") as? String else { return }
         
-        let url = "http://apis.data.go.kr/6260000/SocialWelfareCenterProgramService/getProgramInfo?serviceKey=\(encodingKey)&numOfRows=\(numOfRows)&pageNo=\(PageNo)&resultType=json"
-        
+        let url = "http://apis.data.go.kr/6260000/SocialWelfareCenterProgramsService/getProgramInfoList?serviceKey=\(encodingKey)&numOfRows=\(numOfRows)&pageNo=\(PageNo)&resultType=json"
         
         AF.request(url, method: .get).responseJSON { response in
             switch response.result {
@@ -26,8 +25,7 @@ struct fetchAPI {
                 do {
                     let decoder = JSONDecoder()
                     let welfareData = try decoder.decode(WelfareData.self, from: data)
-                    //print(welfareData.getProgramInfo.item)
-                    completion(welfareData.getProgramInfo.item)
+                    completion(welfareData.getProgramInfo.body.items.item)
                 } catch { print("error \(error)") }
                 
             case .failure(let error):

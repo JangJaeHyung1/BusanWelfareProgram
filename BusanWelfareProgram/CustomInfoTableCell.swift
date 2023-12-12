@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import RxSwift
 
 class CustomInfoTableCell: UITableViewCell {
-    
+    var disposeBag = DisposeBag()
     @IBOutlet weak var programName: UILabel!
     @IBOutlet weak var programContent: UILabel!
     
@@ -24,12 +25,13 @@ class CustomInfoTableCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//    }
-    
     override func layoutSubviews() {
         cellCustomUI()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
     }
     
     func cellCustomUI(){
@@ -46,5 +48,16 @@ class CustomInfoTableCell: UITableViewCell {
         
         cellView.layer.shadowRadius = 3 
         cellView.layer.shadowOpacity = 0.2
+    }
+    
+    func configure(item: Item){
+        programName.text = item.programNm
+        programContent.text = item.programDetail
+        centerName.text = item.centerNm
+        targetLbl.text = "대상 : \(item.target)"
+        cost.text = "비용 : \(item.cost)"
+        
+        selectionStyle = .none
+        backgroundColor = .init(rgb: 0xFAFAFA)
     }
 }

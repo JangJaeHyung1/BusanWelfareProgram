@@ -14,14 +14,19 @@ struct WelfareData: Codable {
 
 // MARK: - GetProgramInfo
 struct GetProgramInfo: Codable {
-    let header: Header
-    let item: [Item]
-    let numOfRows, pageNo, totalCount: Int
+//    let header: Header
+    let body: Body
 }
 
-// MARK: - Header
-struct Header: Codable {
-    let code, message: String
+// MARK: - Body
+struct Body: Codable {
+    let items: Items
+//    let numOfRows, pageNo, totalCount: Int
+}
+
+// MARK: - Items
+struct Items: Codable {
+    let item: [Item]
 }
 
 // MARK: - Item
@@ -33,17 +38,22 @@ struct Item: Codable {
     let addrRoad: String
     let tel: String
     let programNm, programDetail, startDate, finishDate: String
-
+//    let applyURL: String
     enum CodingKeys: String, CodingKey {
-        case cost, target, lat, lng
-        case dataDay = "data_day"
-        case gugun
-        case centerNm = "center_nm"
-        case addrRoad = "addr_road"
-        case tel
-        case programNm = "program_nm"
-        case programDetail = "program_detail"
-        case startDate = "start_date"
-        case finishDate = "finish_date"
-    }
+           case cost, target, lat, lng
+           case dataDay = "data_day"
+           case gugun
+           case centerNm = "center_nm"
+           case addrRoad = "addr_road"
+           case tel
+           case programNm = "program_nm"
+           case programDetail = "program_detail"
+           case startDate = "start_date"
+           case finishDate = "finish_date"
+//           case applyURL = "apply_url"
+       }
 }
+// MARK: - Header
+//struct Header: Codable {
+//    let resultCode, resultMsg: String
+//}
