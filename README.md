@@ -14,6 +14,10 @@ appstore : https://apps.apple.com/kr/app/%EB%B6%80%EC%82%B0-%EC%82%AC%ED%9A%8C%E
 
 ---
 
+archive - Network URL Session refactoring (모듈화, async await 적용) - https://ggasoon2.tistory.com/76
+
+---
+
 시현 영상 - https://youtu.be/AUv3TZYVvEE
 
 
