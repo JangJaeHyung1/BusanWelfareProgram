@@ -14,7 +14,7 @@ class InfoTableViewController: UIViewController{
     @IBOutlet weak var infoTableView: UITableView!
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var ifSearchEmpty: UILabel!
-    
+    var viewModel: NetworkViewModel!
     
     private var biggestTopSafeAreaInset: CGFloat = 0
     private var arr: [Item] = []
@@ -42,21 +42,26 @@ class InfoTableViewController: UIViewController{
     
     
     func fetchData(){
-        gugunArr = []
-        
-        if arr.count == 0{
-            fetchAPI.shared.getData(numOfRows: 2000, PageNo: 1) {
-                [weak self] jsonArr in
-                self?.arr = jsonArr
-                self?.filteringGugunData()
-                self?.reloadAndScrollToTop(self?.gugunArr.count == 0)
-                self?.indicatorView?.stopAnimating()
+        Task {
+            viewModel = NetworkViewModel(apiService: NetworkService())
+            gugunArr = []
+            
+            if arr.count == 0{
+                do {
+                    let data = try await self.viewModel.loadData(numOfRows: 2000, pageNo: 1)
+                    self.arr = data
+                    self.filteringGugunData()
+                    self.reloadAndScrollToTop(self.gugunArr.count == 0)
+                    self.indicatorView?.stopAnimating()
+                } catch {
+                    print("error : \(error)")
+                }
+            }else {
+                filteringGugunData()
+                reloadAndScrollToTop(gugunArr.count == 0)
+                navigationController?.navigationBar.sizeToFit()
+                indicatorView?.stopAnimating()
             }
-        }else {
-            filteringGugunData()
-            reloadAndScrollToTop(gugunArr.count == 0)
-            navigationController?.navigationBar.sizeToFit()
-            indicatorView?.stopAnimating()
         }
     }
     

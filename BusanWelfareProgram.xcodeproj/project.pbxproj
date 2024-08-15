@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		D112475326EF7398002C217A /* SelectGugunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112475226EF7398002C217A /* SelectGugunViewController.swift */; };
 		D112475626EF7500002C217A /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112475526EF7500002C217A /* InfoTableViewController.swift */; };
 		D112475826EF750B002C217A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D112475726EF750B002C217A /* DetailViewController.swift */; };
-		D124713B26F3ADB500063350 /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D124713A26F3ADB500063350 /* RequestAPI.swift */; };
 		D124713D26F3B61D00063350 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D124713C26F3B61D00063350 /* Model.swift */; };
 		D124714126F4868700063350 /* CustomInfoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D124714026F4868700063350 /* CustomInfoTableCell.swift */; };
 		D1498F5F26F0CAB9006A62BE /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1498F5926F0CAB7006A62BE /* NotoSansKR-Medium.otf */; };
@@ -28,6 +27,11 @@
 		D1A1E7C026EDFEB3005E9D19 /* BusanWelfareProgram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1A1E7BE26EDFEB3005E9D19 /* BusanWelfareProgram.xcdatamodeld */; };
 		D1A1E7C226EDFEB4005E9D19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A1E7C126EDFEB4005E9D19 /* Assets.xcassets */; };
 		D1A1E7C526EDFEB4005E9D19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A1E7C326EDFEB4005E9D19 /* LaunchScreen.storyboard */; };
+		E91F2F992C6E11C900C3BEA5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F2F982C6E11C900C3BEA5 /* APIClient.swift */; };
+		E91F2F9B2C6E11EA00C3BEA5 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F2F9A2C6E11EA00C3BEA5 /* EndPoint.swift */; };
+		E91F2F9D2C6E11FD00C3BEA5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F2F9C2C6E11FD00C3BEA5 /* NetworkService.swift */; };
+		E91F2F9F2C6E121500C3BEA5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F2F9E2C6E121500C3BEA5 /* APIService.swift */; };
+		E91F2FA12C6E126900C3BEA5 /* NetworkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F2FA02C6E126900C3BEA5 /* NetworkViewModel.swift */; };
 		E961C3552B287A1C00865AC3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E961C3542B287A1C00865AC3 /* RxCocoa */; };
 		E961C3572B287A1C00865AC3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = E961C3562B287A1C00865AC3 /* RxRelay */; };
 		E961C3592B287A1C00865AC3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E961C3582B287A1C00865AC3 /* RxSwift */; };
@@ -39,7 +43,6 @@
 		D112475226EF7398002C217A /* SelectGugunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGugunViewController.swift; sourceTree = "<group>"; };
 		D112475526EF7500002C217A /* InfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		D112475726EF750B002C217A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		D124713A26F3ADB500063350 /* RequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
 		D124713C26F3B61D00063350 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D124714026F4868700063350 /* CustomInfoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoTableCell.swift; sourceTree = "<group>"; };
 		D1498F5926F0CAB7006A62BE /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
@@ -60,6 +63,11 @@
 		D1A1E7C426EDFEB4005E9D19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A1E7C626EDFEB4005E9D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E182288603E95FE0A621A2A4 /* Pods-BusanWelfareProgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusanWelfareProgram.release.xcconfig"; path = "Target Support Files/Pods-BusanWelfareProgram/Pods-BusanWelfareProgram.release.xcconfig"; sourceTree = "<group>"; };
+		E91F2F982C6E11C900C3BEA5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		E91F2F9A2C6E11EA00C3BEA5 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		E91F2F9C2C6E11FD00C3BEA5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E91F2F9E2C6E121500C3BEA5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		E91F2FA02C6E126900C3BEA5 /* NetworkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +148,7 @@
 		D1A1E7B426EDFEB3005E9D19 /* BusanWelfareProgram */ = {
 			isa = PBXGroup;
 			children = (
+				E91F2F972C6E11B200C3BEA5 /* Network */,
 				D1A1E7B526EDFEB3005E9D19 /* AppDelegate.swift */,
 				D1A1E7B726EDFEB3005E9D19 /* SceneDelegate.swift */,
 				D112475426EF74D7002C217A /* VC */,
@@ -150,11 +159,22 @@
 				D1A1E7BE26EDFEB3005E9D19 /* BusanWelfareProgram.xcdatamodeld */,
 				D1787FE826F3A74C0043EAB6 /* GoogleService-Info.plist */,
 				D1498F5826F0C99D006A62BE /* fonts */,
-				D124713A26F3ADB500063350 /* RequestAPI.swift */,
-				D124713C26F3B61D00063350 /* Model.swift */,
 				D124714026F4868700063350 /* CustomInfoTableCell.swift */,
 			);
 			path = BusanWelfareProgram;
+			sourceTree = "<group>";
+		};
+		E91F2F972C6E11B200C3BEA5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D124713C26F3B61D00063350 /* Model.swift */,
+				E91F2F982C6E11C900C3BEA5 /* APIClient.swift */,
+				E91F2F9A2C6E11EA00C3BEA5 /* EndPoint.swift */,
+				E91F2F9C2C6E11FD00C3BEA5 /* NetworkService.swift */,
+				E91F2F9E2C6E121500C3BEA5 /* APIService.swift */,
+				E91F2FA02C6E126900C3BEA5 /* NetworkViewModel.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,9 +312,13 @@
 				D1A1E7B626EDFEB3005E9D19 /* AppDelegate.swift in Sources */,
 				D112475626EF7500002C217A /* InfoTableViewController.swift in Sources */,
 				D1A1E7C026EDFEB3005E9D19 /* BusanWelfareProgram.xcdatamodeld in Sources */,
+				E91F2F9B2C6E11EA00C3BEA5 /* EndPoint.swift in Sources */,
 				D124714126F4868700063350 /* CustomInfoTableCell.swift in Sources */,
+				E91F2F9F2C6E121500C3BEA5 /* APIService.swift in Sources */,
 				D1A1E7B826EDFEB3005E9D19 /* SceneDelegate.swift in Sources */,
-				D124713B26F3ADB500063350 /* RequestAPI.swift in Sources */,
+				E91F2F992C6E11C900C3BEA5 /* APIClient.swift in Sources */,
+				E91F2F9D2C6E11FD00C3BEA5 /* NetworkService.swift in Sources */,
+				E91F2FA12C6E126900C3BEA5 /* NetworkViewModel.swift in Sources */,
 				D112475826EF750B002C217A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +398,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -430,6 +455,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -447,13 +473,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2024080901;
 				DEVELOPMENT_TEAM = 8Y6GZNH939;
 				INFOPLIST_FILE = BusanWelfareProgram/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.busan.BusanWelfareProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -470,13 +498,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2024080901;
 				DEVELOPMENT_TEAM = 8Y6GZNH939;
 				INFOPLIST_FILE = BusanWelfareProgram/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.busan.BusanWelfareProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
