@@ -10,7 +10,7 @@ UI/UX design : https://www.figma.com/proto/muCIJZBSmkrVQTy3wri48k/부산-사회�
 
 ---
 
-appstore : https://apps.apple.com/kr/app/%EB%B6%80%EC%82%B0-%EC%82%AC%ED%9A%8C%EB%B3%B5%EC%A7%80-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/id1588773594
+appstore : [https://apps.apple.com/kr/app/%EB%B6%80%EC%82%B0-%EC%82%AC%ED%9A%8C%EB%B3%B5%EC%A7%80-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/id1588773594](https://apps.apple.com/kr/app/id1588773594)
 
 ---
 
